@@ -1,0 +1,28 @@
+# Welcome to Serverless!
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: Spotinst-API-Functions
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment ID}  
+
+functions:
+  getElastigroups:
+    runtime: nodejs4.8
+    handler: handler.main
+    memory: 128
+    timeout: 30
+    access: public
+#    cron:
+#      active: false
+#      value: '*/1 * * * *'
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
+plugins:
+  - serverless-spotinst-functions
