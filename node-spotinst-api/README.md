@@ -47,3 +47,4 @@ sls invoke -f NewElastigroupSNS
 ```
 
 Or you can use the test feature on the Spoinst console. Either way the output to the console should be 'No new Elasitgroups' if you do not have any new Elasitgroups in the last minute. Or you will see 'Post success' if you do have a new Elastigroup within the last minute
+
