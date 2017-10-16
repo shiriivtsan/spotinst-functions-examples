@@ -1,4 +1,3 @@
-[![Spotinst Serverless Functions](./assets/functions.png)](https://serverless.com/framework/docs/providers/spotinst/)
 
 [Spotinst Website](https://spotinst.com) • [Spointst Community Slack](https://join.slack.com/t/spotinst-community/shared_invite/enQtMjM5MjUzMDYwMzY4LTQ4YjNkODgyNmE3MGE4ZjU3MjdmZmQ0ZTk3NTZmOTNmZmI3NjFhYjYwNzI1MzAxMzM1Yzk3NTY5MDhiN2U3Zjg) • [Spotinst Serverless Documentation](https://serverless.com/framework/docs/providers/spotinst/)
 
