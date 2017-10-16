@@ -48,6 +48,10 @@ sls invoke -f getElastigroups
 
 Or you can use the test feature on the Spoinst console. Either way the output to the console should be 'No new Elasitgroups' if you do not have any new Elasitgroups in the last hour. Or you will see 'New Group Found' with the groups ID if you do have a new Elastigroup within the last hour. If you have entered the wrong credentials you will get an error.
 
+## Invoking 
+
+For practical use, every Spotinst function is given a unique URL that will run the function every time the HTTPS request is made. 
+
 ## Optional
 
 If you want you can set this function up to run on a schedule using the cron function in the serverless.yml file. Use the [cron function reference](https://crontab.guru/) for help on setting up your cron function. 

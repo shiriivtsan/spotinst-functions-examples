@@ -1,0 +1,26 @@
+# Welcome to Serverless!
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: sql-connection
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment ID}
+
+functions:
+  SQLConnect:
+    runtime: nodejs4.8
+    handler: handler.main
+    memory: 128
+    timeout: 300
+    access: public
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
+plugins:
+  - serverless-spotinst-functions

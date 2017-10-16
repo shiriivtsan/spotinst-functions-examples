@@ -18,4 +18,5 @@ Each of the projects listed here have their own `README.md` that will help you s
 
 | Example | Runtime  |
 |:--------------------------- |:-----|
-|[Node Spotinst API Get All Elastigroups]() </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
+|[Node Spotinst API Get All Elastigroups](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-getGroups) </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
+|[Node MySQL Connection](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| nodeJS |
