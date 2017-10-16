@@ -43,7 +43,7 @@ exports.main = function main (req, res) {
           // Date object created from the API call 
           var jsonDate = new Date(groups[elastigroup].createdAt);
 
-          // Checking if the Elasigroups were created in the past 1 minute
+          // Checking if the Elasigroups were created in the past 1 hour
           if(Math.abs(new Date() - jsonDate)<=3600000){
             outputString = "New Group(s) Found:\n"  
             newGroups.push(groups[elastigroup]["id"])
