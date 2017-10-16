@@ -1,9 +1,8 @@
+[![Spotinst Serverless Functions](http://i2.wp.com/blog.spotinst.com/wp-content/uploads/2017/09/Spotinst-Serverless3-01-01-2-1.jpg?fit=3996%2C1517](https://serverless.com/framework/docs/providers/spotinst/)
 
 [Spotinst Website](https://spotinst.com) • [Spointst Community Slack](https://join.slack.com/t/spotinst-community/shared_invite/enQtMjM5MjUzMDYwMzY4LTQ4YjNkODgyNmE3MGE4ZjU3MjdmZmQ0ZTk3NTZmOTNmZmI3NjFhYjYwNzI1MzAxMzM1Yzk3NTY5MDhiN2U3Zjg) • [Spotinst Serverless Documentation](https://serverless.com/framework/docs/providers/spotinst/)
 
 # Spotinst Serverless Examples
-
-<img align="right" width="300" src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/email/sls-getting-started.gif" />
 
 Here are a few examples to help you get started with Spotinst Serverless Functions
 
