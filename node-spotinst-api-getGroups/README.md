@@ -20,7 +20,7 @@ The last thing you will need is your account ID which can be found in the Spotin
 
 ### Installing
 
-First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin and the HTTPS library by running this command inside the project repository:
+First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin as well as the request and the request-promise libraries by running this command inside the project repository:
 
 ```
 npm install
