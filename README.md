@@ -1,4 +1,4 @@
-[![Spotinst Serverless Functions](http://i2.wp.com/blog.spotinst.com/wp-content/uploads/2017/09/Spotinst-Serverless3-01-01-2-1.jpg?fit=3996%2C1517)](https://serverless.com/framework/docs/providers/spotinst/)
+[![Spotinst Serverless Functions](./assets/functions.jpg)](https://serverless.com/framework/docs/providers/spotinst/)
 
 [Spotinst Functions Website](https://spotinst.com/products/spotinst-functions/) • [Spointst Community Slack](https://join.slack.com/t/spotinst-community/shared_invite/enQtMjM5MjUzMDYwMzY4LTQ4YjNkODgyNmE3MGE4ZjU3MjdmZmQ0ZTk3NTZmOTNmZmI3NjFhYjYwNzI1MzAxMzM1Yzk3NTY5MDhiN2U3Zjg) • [Spotinst Serverless Documentation](https://serverless.com/framework/docs/providers/spotinst/)
 
