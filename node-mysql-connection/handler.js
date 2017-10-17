@@ -71,11 +71,11 @@ status code of 400 is retuned and an appropriate message
 exports.main = function main (req) {
 	// set up connection to DB
 	let pool = mysql.createPool({
-    host: {Your Host},
-    user: {Your Username},
-    password: {Your Password},
-    database: {Your Database},
-    port: 3306
+	    host: {Your Host},
+	    user: {Your Username},
+	    password: {Your Password},
+	    database: {Your Database},
+	    port: 3306
 	});
 
 	let query = ""
