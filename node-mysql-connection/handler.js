@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 
 exports.main = function main (req, res) {
+	// MySQL connection credentials
 	var pool = mysql.createPool({
 		host: {Your Host},
 		user: {Your Username},
@@ -8,10 +9,14 @@ exports.main = function main (req, res) {
 		database: {Your Database},
 		port: 3306
 	});
+
 	var query = ""
 	return new Promise(function(resolve, reject){
 		return pool.getConnection((err, con)=>{
+			// Checking if parameter number = 1 to perform insert into data table. 
+			// If not then just  select * from table
 			if(req.query.number==1){
+				//Checking that all the required parameters are filled out 
 				if(req.query.firstName==undefined || req.query.lastName==undefined ||
 				   req.query.email==undefined || req.query.instances==undefined){
 					return resolve({
@@ -19,6 +24,7 @@ exports.main = function main (req, res) {
 						body: "Parameters not defined"
 					});
 				}else{
+					// Checking that the value being inserted does not already exist in table
 					con.query("SELECT COUNT(*) FROM customers "+
 						        "WHERE first_name='"+req.query.firstName+"' "+
 						        "AND last_name='"+req.query.lastName+"' "+
@@ -30,6 +36,7 @@ exports.main = function main (req, res) {
 							});
 						}
 					});
+					// Insert new row into datatable
 					query = "INSERT INTO customers (first_name, last_name, email, instances) VALUES"
 					query +=  "('"+req.query.firstName+"', '"+req.query.lastName+"', '"
 						            +req.query.email+"', '"+req.query.instances+"');"

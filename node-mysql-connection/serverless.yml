@@ -5,7 +5,7 @@
 #
 # Happy Coding!
 
-service: sql-connection
+service: sql-node
 
 provider:
   name: spotinst
