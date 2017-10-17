@@ -1,63 +1,75 @@
-const https = require('https');
+/*
+This serverless function uses the request-promise library to connect to the 
+Spotinst API and returns all the Elasigroups that have been created in the past
+hour. To change the time that it is checking, change the number in the if 
+statment bellow. It is calculated in miliseconds. 
 
-exports.main = function main (req, res) {
-  // Arguments, account ID and token to access their accounts
-  var token = {Your Token}
-  var account = {Your Account ID}
+To get this function to check your account information, enter in your token and 
+account number bellow. 
+*/
 
-  // Get options for HTTPS request to Spotinst API
-  var getAllElastigroupsOptions = {
-    host: 'api.spotinst.io',
-    path: '/aws/ec2/group?accountId=' + account,
-    method: 'GET',
-    headers:{
-      "Content-Type": "application/json",
-      "Authorization": "Bearer " + token
-    }
-  }
+var rp = require('request-promise');
 
- return new Promise(function(resolve, reject){
-    var outputString = "No new Elasitgroups"
-    // Get request for all the Elasitgroups that are associated with the Account ID and Token
-    https.request(getAllElastigroupsOptions, (response) => {
-      var output = '';
+/*
+Function that takes in the JSON from the API call and returns a string to be
+printed out to the console. Here is where you can change the check time on when
+new Elastigroups have been created.
 
-      response.on('data', (chunk) => {
-        output += chunk;
-      
-      }).on('end', () => {
-        output = JSON.parse(output);
-        // Error handeling if Token or Account ID are incorrecr
-        if(output.response.status.message=="Unauthorized"){
-          console.log("ERROR 400 (Bad Request):Incorrect Token or Account ID. Please try again.")
-          return resolve({
-            statusCode: 400,
-            body: "ERROR 400 (Bad Request):Incorrect Token or Account ID. Please try again."
-          });         
-        }
+@param   response      the returned JSON from API call
+@return  outputString  string printed to console
+*/
+function getGroupInfo(response){
+	let outputString = "No New Group Found"
+	let groups = response.response.items
+	let newGroups = []
+	for (let group in groups){
+		let jsonDate = new Date(groups[group].createdAt)
+		// 3600000 miliseconds = 1 hour
+		if(Math.abs(new Date() - jsonDate)<=3600000){
+			outputString = "New Group(s) Found: "
+			newGroups.push(groups[group].id)
+		}
+	}
+	for(let group in newGroups){
+		outputString += newGroups[group] + "  "
+	}
+	return outputString
+}
 
-        var groups = output.response.items;
-        var newGroups = []
+/*
+This is the main function that is being exported and executed by the serverless
+framework. This funciton has to return a Promise object. This is where you will
+enter in your API token and account ID. Then the request options are set up with
+the appropriate headers and URI endpoint. 
 
-        for(var elastigroup in groups){
-          // Date object created from the API call 
-          var jsonDate = new Date(groups[elastigroup].createdAt);
+@return Promise  will return either a Promise object with a 200 status code if
+                 no errors occur or a Promise object with a 400 status code if
+                 there was an issue executing the API call
+*/
+exports.main = function main () {
+	let token = {Your API Token}
+	let account = {Your Account ID}
 
-          // Checking if the Elasigroups were created in the past 1 hour
-          if(Math.abs(new Date() - jsonDate)<=3600000){
-            outputString = "New Group(s) Found:\n"  
-            newGroups.push(groups[elastigroup]["id"])
-          } 
-        }
-        for(var id in newGroups){
-          outputString += newGroups[id] + "\n"
-        }
-        console.log(outputString)
-        return resolve({
-          statusCode: 200,
-          body: outputString
-        });  
-      });
-    }).end();
-  });
+	let options = {
+		uri:'https://api.spotinst.io/aws/ec2/group',
+		qs: {accountId: account},
+		headers:{
+			"Content-Type": "application/json",
+			"Authorization": "Bearer " + token },
+		json:true
+	}
+
+	return new Promise(function(resolve, reject){
+		rp(options).then((response)=>{
+			return resolve({
+				statusCode: 200,
+				body: getGroupInfo(response)
+			});
+		}).catch((err)=>{
+			return resolve({
+				statusCode: 400,
+				body: "Error has occured, check logs"
+			});
+		})
+	});
 };
