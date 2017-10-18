@@ -16,7 +16,7 @@ Each of the projects listed here have their own `README.md` that will help you s
 
 **Have an example?** Fork this repository and submit a PR for review
 
-## Clone Subdirectory
+### Clone Subdirectory
 
 To clone just one of the projects listed bellow you will need to perform a sparse checkout of the repository. To do this enter the following into the terminal
 
