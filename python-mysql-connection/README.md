@@ -67,7 +67,7 @@ For practical use, every Spotinst function is given a unique URL that will run t
 
 These feilds are specific to the data table and can be personalized to your project. 
 
-**To access URL parameters** simply add `querypram['{Parameter Name}']` into your code as needed.
+**To access URL parameters** simply add `queryparam['{Parameter Name}']` into your code as needed.
 
 ## Optional
 

@@ -66,7 +66,9 @@ def checkInTable(queryparams, cursor):
 	return False
 
 """
-
+This function will insert a new row into the data table. You need the query parameters
+to know what values to insert, you need the cursor to execute the Insert function and
+you need the connection object to write those changes
 Args:
 	queryparams: This is where the URL parameters live and are reference by name.
          cursor: This holds the connection to the database and will execute the 
