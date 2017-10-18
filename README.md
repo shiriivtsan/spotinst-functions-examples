@@ -16,6 +16,30 @@ Each of the projects listed here have their own `README.md` that will help you s
 
 **Have an example?** Fork this repository and submit a PR for review
 
+## Clone Subdirectory
+
+To clone just one of the projects listed bellow you will need to perform a sparse checkout of the repository. To do this enter the following into the terminal
+
+1. Create a new project directory and enter the root
+```
+mkdir {Project Name}
+cd {Project Name}
+```
+
+2. Initialize the new directory as a Git repository and add the remote end point for this repository
+```
+git init
+git remote add -f origin https://github.com/spotinst/spotinst-functions-examples
+```
+
+3. Add the project that you want to clone to the .git/info/sparse-checkout file so when you pull you will only pull the project specified
+```
+echo {Project Directory Name} >> .git/info/sparse-checkout
+git pull origin master
+```
+
+
+
 | Example | Runtime  |
 |:--------------------------- |:-----|
 |[Node Spotinst API Get All Elastigroups](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-getGroups) </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
