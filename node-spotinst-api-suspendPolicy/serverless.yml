@@ -1,0 +1,38 @@
+# Welcome to Serverless!
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: suspend-process
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment ID}
+
+functions:
+  suspend:
+    runtime: nodejs8.3
+    handler: suspend.main
+    memory: 128
+    timeout: 30
+    access: public
+#    cron:
+#      active: true
+#      value: '*/1 * * * *'
+
+  unsuspend:
+      runtime: nodejs8.3
+      handler: unsuspend.main
+      memory: 128
+      timeout: 30
+  #    cron:
+  #      active: true
+  #      value: '*/1 * * * *
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
+plugins:
+  - serverless-spotinst-functions
