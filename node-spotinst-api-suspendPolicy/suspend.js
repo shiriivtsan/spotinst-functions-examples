@@ -1,3 +1,8 @@
+/*
+This function will suspend one of your Elastigroups policy. All you need is to enter
+in your account ID, Spotinst token, group name and policy name. You can also set this
+function on a timer so it will automatically suspend a policy on a regualr interval.
+*/
 var rp = require('request-promise');
 
 exports.main = function main () {
