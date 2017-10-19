@@ -1,0 +1,25 @@
+# Welcome to Serverless!
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: ElastigroupSNS
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment ID}
+
+functions:
+  PythonSNS:
+    runtime: python2.7
+    handler: handler.main
+    memory: 128
+    timeout: 30
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
+plugins:
+  - serverless-spotinst-functions

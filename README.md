@@ -49,6 +49,7 @@ git pull origin master
 |:--------------------------- |:-----|
 |[Node Spotinst API Get All Elastigroups](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-getGroups) </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
 |[Node Spotinst API Suspend/Unsuspend Scaling Policies](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-suspendPolicy) </br> This example shows you how to connect to the Spotinst API to suspend or unsupend scaling policies on your elastigroups| nodeJS |
+|[Python Spotinst SDK Get All Elastigroups](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-spotinst-sdk-getGroups) </br> This example shows you how to connect to the Spotinst SDK and return all the Elastigroups that were created in the past hour| Python |
 |[Node MySQL Connection](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| nodeJS |
 |[Python MySQL Connection](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| Python |
 
