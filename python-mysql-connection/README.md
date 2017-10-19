@@ -8,7 +8,7 @@ You will need to have the serverless framework installed, your Spotinst credenti
 
 First you will want to install the serverless framework onto your local machine using the terminal command
 
-```
+```bash
 npm install -g serverless
 ```
 
@@ -24,13 +24,13 @@ The last thing you will need is your account ID which can be found in the Spotin
 
 First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin by running this command:
 
-```
+```bash
 npm install
 ```
 
 Then you will need to have the MySQL library installed into your project directory so you will need to run this command in the root directory for your project
 
-```
+```bash
 pip install mysql-connector==2.1.4 -t /path/to/project-dir
 ```
 
@@ -40,7 +40,7 @@ Once this has been completed navigate to the handler.py file and input your MySQ
 
 Next you will want to deploy this function using this command:
 
-```
+```bash
 sls deploy
 ```
 
@@ -50,7 +50,7 @@ The first time you run this command your new function will be created and linked
 
 To test if this is working use the command:
 
-```
+```bash
 sls invoke -f SQLConnect
 ```
 

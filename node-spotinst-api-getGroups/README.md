@@ -8,7 +8,7 @@ You will need to have the serverless framework installed, your Spotinst credenti
 
 First you will want to install the serverless framework onto your local machine using the terminal command
 
-```
+```bash
 npm install -g serverless
 ```
 
@@ -22,7 +22,7 @@ The last thing you will need is your account ID which can be found in the Spotin
 
 First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin as well as the request and the request-promise libraries by running this command inside the project repository:
 
-```
+```bash
 npm install
 ```
 
@@ -32,7 +32,7 @@ Once this has been completed navigate to the handler.js file and input your toke
 
 Next you will want to deploy this function using this command:
 
-```
+```bash
 sls deploy
 ```
 
@@ -42,7 +42,7 @@ The first time you run this command your new function will be created and linked
 
 To test if this is working use the command:
 
-```
+```bash
 sls invoke -f getElastigroups
 ```
 
