@@ -32,7 +32,12 @@ git init
 git remote add -f origin https://github.com/spotinst/spotinst-functions-examples
 ```
 
-3. Add the project that you want to clone to the .git/info/sparse-checkout file so when you pull you will only pull the project specified
+3. Enable Git to perform only sparse checkout allowing you to pull ony the project that you want
+```
+git config core.sparsecheckout true
+```
+
+4. Add the project that you want to clone to the .git/info/sparse-checkout file so when you pull you will only pull the project specified
 ```
 echo {Project Directory Name} >> .git/info/sparse-checkout
 git pull origin master
