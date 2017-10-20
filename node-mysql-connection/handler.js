@@ -11,6 +11,14 @@ checkNewValue() function. Lastly you will want to change the query paramters for
 insert function bellow
 */
 const mysql = require('mysql');
+// set up connection to DB
+const pool = mysql.createPool({
+    host: {Your Host},
+    user: {Your Username},
+    password: {Your Password},
+    database: {Your Database},
+    port: 3306
+});
 
 /*
 This function takes in the request parametes where the URL parameters live. To 
@@ -69,15 +77,6 @@ status code of 400 is retuned and an appropriate message
                  there was an issue with the request
 */
 exports.main = function main (req) {
-	// set up connection to DB
-	let pool = mysql.createPool({
-	    host: {Your Host},
-	    user: {Your Username},
-	    password: {Your Password},
-	    database: {Your Database},
-	    port: 3306
-	});
-
 	let query = ""
 	return new Promise(function(resolve, reject){
 		return pool.getConnection((err, con)=>{
@@ -105,6 +104,7 @@ exports.main = function main (req) {
 			}
 			console.log(query)
 			con.query(query,(err,res)=>{
+				con.release()
 				console.log(res)
 				return resolve({
 					statusCode: 200,
