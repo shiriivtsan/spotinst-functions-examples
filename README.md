@@ -39,7 +39,7 @@ git config core.sparsecheckout true
 
 4. Add the project that you want to clone to the .git/info/sparse-checkout file so when you pull you will only pull the project specified
 ```bash
-echo {Project Directory Name} >> .git/info/sparse-checkout
+echo {Project Directory Name}/* >> .git/info/sparse-checkout
 git pull origin master
 ```
 
