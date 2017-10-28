@@ -52,4 +52,5 @@ git pull origin master
 |[Python Spotinst SDK Get All Elastigroups](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-spotinst-sdk-getGroups) </br> This example shows you how to connect to the Spotinst SDK and return all the Elastigroups that were created in the past hour| Python |
 |[Node MySQL Connection](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| nodeJS |
 |[Python MySQL Connection](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| Python |
-
+|[Simple Node Chatbot](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-simple-chatbot) </br> This example simulates a basic chat bot that runs entirly on serverless| nodeJS |
+|[Node Raffle App](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-raffle-app) </br> This project is a simple raffle app that could be used for any event| nodeJS |
