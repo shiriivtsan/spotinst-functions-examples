@@ -1,0 +1,54 @@
+# Welcome to Serverless!
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: RaffleApp
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: env-f089dd26
+
+functions:
+  HomePage:
+    runtime: nodejs8.3
+    handler: homePage.main
+    memory: 128
+    timeout: 30
+    access: public
+
+  MySQLConnect:
+    runtime: nodejs8.3
+    handler: mysqlConnect.main
+    memory: 128
+    timeout: 30
+    access: public
+
+  RunGame:
+    runtime: nodejs8.3
+    handler: runGame.main
+    memory: 128
+    timeout: 30
+    access: public
+
+  Reset:
+    runtime: nodejs8.3
+    handler: reset.main
+    memory: 128
+    timeout: 30
+    access: public
+
+  Admin:
+    runtime: nodejs8.3
+    handler: admin.main
+    memory: 128
+    timeout: 30
+    access: public
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
+plugins:
+  - serverless-spotinst-functions
