@@ -4,7 +4,7 @@
 
 # Spotinst Serverless Examples
 
-<img align="right" width="300" src="./assets/terminal.jpg" />
+<img align="right" width="400" src="./assets/terminal.jpg" />
 
 Here are a few examples to help you get started with Spotinst Serverless Functions
 
