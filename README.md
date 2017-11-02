@@ -24,6 +24,12 @@ To start any of the examples you can use any of the URLs as a template with the 
 serverless create --template-url <Project URL>
 ```
 
+Example:
+
+```bash
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-getGroups
+```
+
 
 | Example | Runtime  |
 |:--------------------------- |:-----|
