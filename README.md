@@ -18,33 +18,11 @@ Each of the projects listed here have their own `README.md` that will help you s
 
 **Have an example?** Fork this repository and submit a PR for review
 
-### Clone Subdirectory
+To start any of the examples you can use any of the URLs as a template with the serverless framework. Simply type in:
 
-To clone just one of the projects listed bellow you will need to perform a sparse checkout of the repository. To do this enter the following into the terminal
-
-1. Create a new project directory and enter the root
 ```bash
-mkdir {Project Name}
-cd {Project Name}
+serverless create --template-url <Project URL>
 ```
-
-2. Initialize the new directory as a Git repository and add the remote end point for this repository
-```bash
-git init
-git remote add -f origin https://github.com/spotinst/spotinst-functions-examples
-```
-
-3. Enable Git to perform only sparse checkout allowing you to pull ony the project that you want
-```bash
-git config core.sparsecheckout true
-```
-
-4. Add the project that you want to clone to the .git/info/sparse-checkout file so when you pull you will only pull the project specified
-```bash
-echo {Project Directory Name}/* >> .git/info/sparse-checkout
-git pull origin master
-```
-
 
 
 | Example | Runtime  |
