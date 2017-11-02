@@ -54,7 +54,7 @@ GROUP_ROLL_FINISHED
 CANT_SCALE_UP_GROUP_MAX_CAPACITY
 ```  
 
-**Note:**The options you select here will have to match the options that you input for the checkEventType() function in the handler.js
+**Note:** The options you select here will have to match the options that you input for the checkEventType() function in the handler.js
 
 
 
