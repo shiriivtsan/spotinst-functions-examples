@@ -1,0 +1,24 @@
+
+service: PagerApp
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment ID} 
+
+functions:
+  PagerApp:
+    runtime: nodejs8.3
+    handler: handler.main
+    memory: 128
+    timeout: 30
+    access: public
+#     cron:  # Setup scheduled trigger with cron expression
+#      active: true
+#      value: '* * * * *'
+#    environmentVariables: {
+#      Key: "Value",
+#    }
+
+plugins:
+  - serverless-spotinst-functions
