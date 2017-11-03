@@ -2,6 +2,15 @@
 
 This is a simple node project that allows you to connect to the Spotinst API and get current Elastigroups from your account.
 
+## Download
+
+To download this project as a template for your own Spotinst Function please use this command
+
+```bash
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/python-spotinst-sdk-getGroups
+```
+
+
 ### Prerequisites
 
 You will need to have the serverless framework installed, your Spotinst credentials set up and you will need MySQL database credentials, environment ID and account ID in order to run this project. 

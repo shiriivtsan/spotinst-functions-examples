@@ -93,7 +93,7 @@ Returns:
 	(Serverless Object): Serverless object that will have a status code 400 if there
 	                     was an error executing the code or 200 if not
 """	
-def main(args):
+def main(event, context):
 	#configuring connection to Database
 	config = {
 		'user':{Your Username}, 
@@ -106,7 +106,7 @@ def main(args):
 	cursor = connection.cursor(buffered=True)
 
 	#getting URL parameters
-	queryparams = args.get("query", {})
+	queryparams = event.get("query", {})
 	# Checking if there is 'number=1' in the URL params
 	try:
 		queryparams['number']

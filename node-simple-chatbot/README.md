@@ -4,6 +4,15 @@
 
 This porject will simulate a basic chatbot. The user will be able to enter messages and the bot will check if there is a response to the exact input from the user. If the user does not enter the exact input then the bot will respond with "I dont have an answer for that". If you want to input your own message go to the `memory.js` file and alter it for your needs. 
 
+## Download
+
+To download this project as a template for your own Spotinst Function please use this command
+
+```bash
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-simple-chatbot
+```
+
+
 ### Prerequisites
 
 You will need to have the serverless framework installed, your Spotinst credentials set up and you will need MySQL database credentials, environment ID and account ID in order to run this project. 

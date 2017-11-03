@@ -21,17 +21,13 @@ This is the function that is used to display the Admin page. From this page you 
 to look at all the players, run the game, or reset the game. Each one of these choices
 maps to a serverless function.
 
-@return Promise  The serverless framework requires that a Promise object is returned in order
+@return callbck  The serverless framework requires that a callback is returned in order
                  to run properly
 */
-exports.main = function main () {
-  return new Promise(function(resolve, reject){
-    return resolve({
-      statusCode: 200,
-      headers:{
-      	'Content-Type': 'text/html'
-      },
-      body: html
-    });
+module.exports.main = function main (event, context, callback) {
+  callback(null, {
+  statusCode: 200, 
+    body: html,
+    headers: {'Content-Type': 'text/html'}
   });
 };
