@@ -2,6 +2,15 @@
 
 This project is a basic slack bot that will connect to a group on GitHub and check all the repositories to see when they were updated. Then it will send a message to your Slack channel alerting you of the repos that have been updated in the past week or not. 
 
+## Download
+
+To download this project as a template for your own Spotinst Function please use this command
+
+```bash
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-slack-bot
+```
+
+
 ### Prerequisites
 
 You will need to have the serverless framework installed, your Spotinst credentials set up and you will need MySQL database credentials, environment ID and account ID in order to run this project. 

@@ -2,6 +2,15 @@
 
 This porject will allow you to create a connection to a MySQL database and either return all the values or given the right parameters will insert a new value into your table.
 
+## Download
+
+To download this project as a template for your own Spotinst Function please use this command
+
+```bash
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/python-mysql-connection
+```
+
+
 ### Prerequisites
 
 You will need to have the serverless framework installed, your Spotinst credentials set up and you will need MySQL database credentials, environment ID and account ID in order to run this project. 

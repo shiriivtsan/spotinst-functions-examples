@@ -5,6 +5,15 @@
 
 This app is a basic raffle app. It uses a MySQL database to store the users information then randomly select from the pool of users one winner. The whole app consists of a user side and an admin side. The admin is the game master and can see the users, run the game and reset, which will eliminate the table and create a new one.
 
+## Download
+
+To download this project as a template for your own Spotinst Function please use this command
+
+```bash
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-raffle-app
+```
+
+
 ### Prerequisites
 
 You will need to have the serverless framework installed, your Spotinst credentials set up and you will need MySQL database credentials, environment ID and account ID in order to run this project. 

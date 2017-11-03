@@ -5,7 +5,7 @@ function on a timer so it will automatically suspend a policy on a regualr inter
 */
 var rp = require('request-promise');
 
-exports.main = function main () {
+module.exports.main = function main (event, context, callback) {
 	let token = {Your Token}
 	let account = {Your Account ID}
 	let group = {Your Group ID}
@@ -22,19 +22,17 @@ exports.main = function main () {
 		json:true
 	}
 
-	return new Promise(function(resolve, reject){
-		rp(options).then((response)=>{
-			console.log(response)
-			return resolve({
-				statusCode: 200,
-				body: "Sucess"
-			});
-		}).catch((err)=>{
-			console.log(err)
-			return resolve({
-				statusCode: 400,
-				body: "Error, Check logs for more details"
-			});
-		})
-	});
+	rp(options).then((response)=>{
+		console.log(response)
+		callback(null, {
+			statusCode: 200, 
+			body: "Success"
+		});
+	}).catch((err)=>{
+		console.log(err)
+		callback(null, {
+			statusCode: 400, 
+			body: "Error, check logs for more details"
+		});
+	})
 };

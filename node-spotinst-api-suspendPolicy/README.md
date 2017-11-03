@@ -2,6 +2,14 @@
 
 This is a simple node project that allows you to connect to the Spotinst API and either suspend or unsuspend scaling policies on your Elastigroup.
 
+## Download
+
+To download this project as a template for your own Spotinst Function please use this command
+
+```bash
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-suspendPolicy
+```
+
 ### Prerequisites
 
 You will need to have the serverless framework installed, your Spotinst credentials set up and you will need an API token, environment ID and account ID in order to run this project. 

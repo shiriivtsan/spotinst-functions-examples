@@ -42,11 +42,9 @@ framework. This funciton has to return a Promise object. This is where you will
 enter in your API token and account ID. Then the request options are set up with
 the appropriate headers and URI endpoint. 
 
-@return Promise  will return either a Promise object with a 200 status code if
-                 no errors occur or a Promise object with a 400 status code if
-                 there was an issue executing the API call
+@return callback  This is the required return for Serverless Functions.
 */
-exports.main = function main () {
+module.exports.main = function main (event, context, callback) {
 	let token = {Your API Token}
 	let account = {Your Account ID}
 
@@ -58,18 +56,16 @@ exports.main = function main () {
 			"Authorization": "Bearer " + token },
 		json:true
 	}
-
-	return new Promise(function(resolve, reject){
-		rp(options).then((response)=>{
-			return resolve({
-				statusCode: 200,
-				body: getGroupInfo(response)
-			});
-		}).catch((err)=>{
-			return resolve({
-				statusCode: 400,
-				body: "Error has occured, check logs"
-			});
-		})
-	});
+	
+	rp(options).then((response)=>{
+    	callback(null, {
+			statusCode: 200, 
+			body: getGroupInfo(response)
+		});
+	}).catch((err)=>{
+    	callback(null, {
+			statusCode: 400, 
+			body: "An Error has occured. Please check logs."
+		});
+	})
 };

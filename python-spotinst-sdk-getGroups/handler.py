@@ -16,9 +16,9 @@ def getGroupInfo(getGroups):
 		output += single + "  "
 	return output
 
-def main(args):
-	token = "a91bbd28ba0276df2b9f5a9ec74fb52ee4fe182d0ee55350c89faa154c6d0e00"
-	accountId = "act-92879601"
+def main(event, context):
+	token = {Your Token}
+	accountId = {Your Account ID}
 
 	client = spotinst.SpotinstClient(auth_token=token, account_id=accountId)
 	getGroups = json.loads(json.dumps(client.get_elastigroups()))

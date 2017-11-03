@@ -29,17 +29,13 @@ This function is used to display the home page that the users actually use. On t
 have a form where the user enters first name, last name, email and company. If the feilds
 are not entered correctly the user will be propted to fix this. 
 
-@return Promise  The serverless framework requires that a Promise object is returned in order
+@return callbck  The serverless framework requires that a callback is returned in order
                  to run properly
 */
-exports.main = function main () {
-  return new Promise(function(resolve, reject){
-    return resolve({
-      statusCode: 200,
-      headers:{
-      	'Content-Type': 'text/html'
-      },
-      body: html
-    });
+module.exports.main = function main (event, context, callback) {
+  callback(null, {
+  statusCode: 200, 
+    body: html,
+    headers: {'Content-Type': 'text/html'}
   });
 };
