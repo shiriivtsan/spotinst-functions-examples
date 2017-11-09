@@ -44,5 +44,6 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 | Intermediate Examples | Runtime  |
 |:--------------------------- |:-----|
 |[Simple Node Chatbot](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-simple-chatbot) </br> This example simulates a basic chat bot that allows the user to enter a message and get a pre programmed response| nodeJS |
+|[Python AWS Batch Queue and Elastigroup Connect](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-aws-batch) </br> This function will check the jobs in your batch queue and either scale your Elastigroup up or down based on the requirements for the upcoming jobs| python |
 |[Node Raffle App](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-raffle-app) </br> This project is a simple raffle app where users are able to enter to win and one user is randomly selected| nodeJS |
 |[Node Slack Bot](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-slack-bot) </br> This app will create a basic Slack bot that connects to your GitHub and message you once a week with a status update on your repos| nodeJS |
