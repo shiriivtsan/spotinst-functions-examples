@@ -51,18 +51,18 @@ The first time you run this command your new function will be created and linked
 
 For this function you will need to create a skill through the (Alexa Developer portal)[https://developer.amazon.com/edw/home.html#/ ] You will want to select "Alexa Skills Kit" then "Add New Skill". Once you are on the Create a New Alexa Skill set-up page you will first be on the Skill Information tab. Here you will want to name the Skill "Spot Skill" and set the invocation name to be the same. Once this is done find the Application ID and copy it. You will need to paste this key into your handler.js file for the variable `skillID`. When finished select Save then Next.
 
-<img align="right" width="300" src="./assets/image1.png" />
+<img align="center" width="500" src="./assets/image1.png" />
 
 Next you will be under the Interaction Model tab. Here you will need to copy the contents of the file called InentSchema and paste it into the Intent Schema text box. Then you will copy the contents of sample utterances and paste them into the Sample Utterance text box. When finished select Save then Next
 
-<img align="right" width="300" src="./assets/image2.png" />
-<img align="right" width="300" src="./assets/image3.png" />
+<img align="center" width="500" src="./assets/image2.png" />
+<img align="center" width="500" src="./assets/image3.png" />
 
 Next you will be under the Configuration tab. Here you will want to select the service endpoint to be HTTP. Once you select this you will see a text box appear that is labeled default. Here you will copy and paste the URL from your Spotinst function. When finished select Save then Next
 
 Finally you will be in the SSL Certificate tab. Spotinst functions all have a protected SSL Certificate. To autenicate this you will need to select the middle option that says "My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority"
 
-<img align="right" width="300" src="./assets/image4.png" />
+<img align="center" width="500" src="./assets/image4.png" />
 
 Once this is completed you can check if your skill is working by inputing the sample utterances into the Testing tab. Here you should get back the information about your Elastigroup
 
