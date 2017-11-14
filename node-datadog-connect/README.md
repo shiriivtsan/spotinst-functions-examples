@@ -30,13 +30,13 @@ The last thing you will need is your account ID which can be found in the Spotin
 
 ### Installing
 
-First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin and the mysql library by running this command inside the project repository:
+First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin, the request and the request promise libraries by running this command inside the project repository:
 
 ```bash
 npm install
 ```
 
-Once this has been completed navigate to the handler.js file and input your MySQL credentials. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
+Once this has been completed navigate to the timer.js and trigger.js files to input your Data Dog credentials. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
 
 ## Deployment
 
