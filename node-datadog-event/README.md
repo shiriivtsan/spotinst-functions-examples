@@ -1,13 +1,13 @@
 # Connect Elastigroup to Data Dog Events and Metrics
 
-This project we will connect your Elastigroups to Data Dog to send a report every minute to Data Dog on the number of instances you have as a metric and also send an event notification when you add, delete or have an unhealthy instance.
+This project we will connect your Elastigroups to Data Dog to send an event notification when you add, delete or have an unhealthy instance.
 
 ## Download
 
 To download this project as a template for your own Spotinst Function please use this command
 
 ```bash
-serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-datadog-connect
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-datadog-event
 ```
 
 ### Prerequisites
@@ -36,7 +36,7 @@ First you will need to fork this repository and set it up on your local machine.
 npm install
 ```
 
-Once this has been completed navigate to the timer.js and trigger.js files to input your Data Dog credentials. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
+Once this has been completed navigate to the handler.js files to input your Data Dog credentials. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
 
 ## Deployment
 
@@ -64,8 +64,5 @@ CANT_SCALE_UP_GROUP_MAX_CAPACITY
 
 **Note:** The options you select here will have to match the options that you input for the checkEventType() function in the handler.js
 
-## Setting Up Timer
-
-The timer function is meant to run on a schedule using the cron function in the serverless.yml file. Use the [cron function reference](https://crontab.guru/) for help on setting up your cron function to select how many times you want the function to check your Elastigroup and post to Data Dog
 
 

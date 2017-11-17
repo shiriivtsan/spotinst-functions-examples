@@ -1,0 +1,30 @@
+service: EMRAutoScaling
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: 
+
+functions:
+  ScaleUp:
+    runtime: nodejs8.3
+    handler: scaleUp.main
+    memory: 128
+    timeout: 30
+    access: private
+#     cron:  # Setup scheduled trigger with cron expression
+#      active: true
+#      value: '* * * * *'
+
+  ScaleDown:
+    runtime: nodejs8.3
+    handler: scaleDown.main
+    memory: 128
+    timeout: 30
+    access: private
+#     cron:  # Setup scheduled trigger with cron expression
+#      active: true
+#      value: '* * * * *'
+
+plugins:
+  - serverless-spotinst-functions
