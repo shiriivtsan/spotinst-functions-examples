@@ -31,21 +31,30 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 ```
 
 
-| Begginer Examples | Runtime  |
+|Examples | Runtime  |
 |:--------------------------- |:-----|
 |[Node Spotinst API Get All Elastigroups](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-getGroups) </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
+
 |[Node Spotinst API Suspend/Unsuspend Scaling Policies](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-suspendPolicy) </br> This example shows you how to connect to the Spotinst API to suspend or unsupend scaling policies on your elastigroups| nodeJS |
+
 |[Python Spotinst SDK Get All Elastigroups](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-spotinst-sdk-getGroups) </br> This example shows you how to connect to the Spotinst SDK and return all the Elastigroups that were created in the past hour| Python |
+
 |[Node MySQL Connection](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| nodeJS |
+
 |[Python MySQL Connection](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| Python |
+
 |[Node Elastigroup-PagerDuty Connection](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-pagerduty-connection) </br> You can use this function to connect your Elastigroup to PagerDuty to push notification when you launch and terminate instances as well as other supported notifications| nodeJS |
+
 |[Python AWS Batch Queue and Elastigroup Connect](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-aws-batch) </br> This function will check the jobs in your batch queue and either scale your Elastigroup up or down based on the requirements for the upcoming jobs| python |
 
-
-| Intermediate Examples | Runtime  |
-|:--------------------------- |:-----|
 |[Simple Node Chatbot](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-simple-chatbot) </br> This example simulates a basic chat bot that allows the user to enter a message and get a pre programmed response| nodeJS |
+
 |[Alexa Skill Running on Spotinst](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-alexa-skill) </br> This function is an Alexa skill that runs entirly on Spotinst. It allows you to check your Elastigroups from your Alexa| nodeJS |
+
 |[Node Raffle App](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-raffle-app) </br> This project is a simple raffle app where users are able to enter to win and one user is randomly selected| nodeJS |
+
 |[Node Slack Bot](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-slack-bot) </br> This app will create a basic Slack bot that connects to your GitHub and message you once a week with a status update on your repos| nodeJS |
-|[Node Elastigroup-Data Dog Connect](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-datadog-connect) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts both Events and Metrics to track your group| nodeJS |
+
+|[Node Elastigroup-Data Dog Metrics](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-datadog-metric) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Metrics to track your group| nodeJS |
+
+|[Node Elastigroup-Data Dog Events](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-datadog-event) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Events to track your group| nodeJS |
