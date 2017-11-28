@@ -27,7 +27,7 @@ function callbackError(){
 
 module.exports.main = function main (event, context, callback) {
 	// Data dog key
-	let key = {Your Data Dog Key}
+	let api_key = process.env['datadogAPI']
 
 	// Check if event has been triggered
 	try{

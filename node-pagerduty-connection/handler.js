@@ -29,8 +29,8 @@ also where you will want to set the description that you want to see when this f
 @return callback  This is the required return for Serverless Functions.
 */
 module.exports.main = function main (event, context, callback) {
-	let token = {PagerDuty Token}
-	let key = {PagerDuty service_key}
+	let token = process.env['pagerToken']
+	let key = process.env['pagerKey']
 
 	let eventDetails = JSON.parse(JSON.parse(event.body).message)
 	let description = "False Alarm"

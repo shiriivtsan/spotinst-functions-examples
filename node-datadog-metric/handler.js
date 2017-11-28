@@ -60,11 +60,11 @@ function callbackError(){
 
 module.exports.main = function main (event, context, callback) {
 	// Data Dog Key
-	let api_key = {Your DD API Key}
+	let api_key = process.env['datadogAPI']
 
 	//Spotinst Credentials
-	let token = {Your Spotinst Token}
-	let account = {Your Account}
+	let token = process.env['spotToken']
+	let account = process.env['spotAccount']
 
 	//Options to get all groups from account
 	let groupOptions = {

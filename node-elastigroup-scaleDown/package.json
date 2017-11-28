@@ -1,12 +1,13 @@
 {
-  "name": "spotionst-nodejs",
+  "name": "ElastigroupScaleDown",
   "version": "1.0.0",
-  "description": "Spotinst Functions NodeJS sample for serverless framework service.",
+  "description": "This is a simple node project that allows you to connect to the Spotinst API and scale down your Elastigroup",
   "main": "handler.js",
   "keywords": [
     "serverless",
     "spotinst"
   ],
+  "template":true,
   "devDependencies": {
     "serverless-spotinst-functions": "*"
   },

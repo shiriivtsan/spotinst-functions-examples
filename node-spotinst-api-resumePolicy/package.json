@@ -1,13 +1,13 @@
 {
-  "name": "GetGroups",
+  "name": "ResumeScalingPolicy",
   "version": "1.0.0",
-  "description": "Spotinst API Connect to Get Groups",
+  "description": "This is a simple node project that allows you to connect to the Spotinst API and resume scaling policies on your Elastigroup.",
   "main": "handler.js",
   "keywords": [
     "serverless",
     "spotinst"
   ],
-  "template": false,
+  "template":true,
   "dependencies": {
     "request": "^2.83.0",
     "request-promise": "^4.2.2",

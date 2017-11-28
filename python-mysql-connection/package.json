@@ -1,12 +1,13 @@
 {
-  "name": "spotionst-python",
+  "name": "PythonMySQLConnect",
   "version": "1.0.0",
-  "description": "Spotinst Functions Python sample for serverless framework service.",
+  "description": "Connect to a MySQL database and return all the rows in the table or insert a single value",
   "main": "handler.js",
   "keywords": [
     "serverless",
     "spotinst"
   ],
+  "template":false,
   "dependencies": {
     "serverless-spotinst-functions": "*"
   }

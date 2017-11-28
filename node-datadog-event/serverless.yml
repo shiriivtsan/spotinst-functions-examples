@@ -1,5 +1,4 @@
-
-service: DataDog
+service: DataDogEvent
 
 provider:
   name: spotinst
@@ -13,6 +12,9 @@ functions:
     memory: 128
     timeout: 30
     access: public
+    environmentVariables: {
+      datadogAPI: "Your Data Dog API Token"
+    }
 
 plugins:
   - serverless-spotinst-functions

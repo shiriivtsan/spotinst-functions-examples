@@ -1,12 +1,13 @@
 {
-  "name": "spotionst-python",
+  "name": "AWSBatchConnect",
   "version": "1.0.0",
-  "description": "Spotinst Functions Python sample for serverless framework service.",
+  "description": "Connect to your AWS Batch Queue and Scale your elastigroup up or down based on the upcoming jobs",
   "main": "handler.js",
   "keywords": [
     "serverless",
     "spotinst"
   ],
+  "template": false,
   "devDependencies": {
     "serverless-spotinst-functions": "*"
   }

@@ -1,22 +1,22 @@
-service: SuspendScalingPolicy
+service: EMRScaleDown
 
 provider:
   name: spotinst
   spotinst:
-    environment: {Your Environment ID}
+    environment: 
 
 functions:
-  SuspendScalingPolicy:
+  EMRScaleDown:
     runtime: nodejs8.3
     handler: handler.main
     memory: 128
     timeout: 30
-    access: public
+    access: private
     environmentVariables: {
-      spotToken: "Spotinst API Token",
       spotAccount: "Spotinst Account ID",
-      spotGroup: "Elastigroup ID",
-      spotPolicy: "Scaling Policy Name"
+      spotToken: "Spotinst API Token",
+      spotEMR: "EMR Elastigroup ID",
+      adjustment: "Ammount to Scale"
     }
 
 plugins:

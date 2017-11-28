@@ -1,12 +1,13 @@
 {
-  "name": "spotionst-nodejs",
+  "name": "PagerDutyConnect",
   "version": "1.0.0",
-  "description": "Spotinst Functions NodeJS sample for serverless framework service.",
+  "description": "This project allows you to connect your Elastigroups to PagerDuty to send notification for any event of our Event Types. The idea is that the Elastigroup will send a request to this function which will in tern send a event notification to PagerDuty.",
   "main": "handler.js",
   "keywords": [
     "serverless",
     "spotinst"
   ],
+  "template": true,
   "devDependencies": {
     "serverless-spotinst-functions": "*"
   },

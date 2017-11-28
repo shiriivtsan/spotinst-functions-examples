@@ -1,13 +1,13 @@
-# Suspend Scaling Policy Using Spotinst API 
+# Resume Scaling Policy Using Spotinst API 
 
-This is a simple node project that allows you to connect to the Spotinst API and suspend scaling policies on your Elastigroup.
+This is a simple node project that allows you to connect to the Spotinst API and resume scaling policies on your Elastigroup.
 
 ## Download
 
 To download this project as a template for your own Spotinst Function please use this command
 
 ```bash
-serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-suspendPolicy
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-resumePolicy
 ```
 
 ### Prerequisites
@@ -57,10 +57,10 @@ After the project has been deployed you will need to enter you Spotinst Account 
 To test if this is working use the command:
 
 ```bash
-sls invoke -f SuspendScalingPolicy
+sls invoke -f ResumeScalingPolicy
 ```
 
-Or you can use the test feature on the Spoinst console. Either way the output to the console should be 'Success' if the request was made successfully and your process will suspend. If you have entered the wrong credentials or if you try to suspend a policy that is already running you will get an error.
+Or you can use the test feature on the Spoinst console. Either way the output to the console should be 'Success' if the request was made successfully and your process will resume. If you have entered the wrong credentials or if you try to resume a policy that is already running you will get an error.
 
 ## Invoking 
 
