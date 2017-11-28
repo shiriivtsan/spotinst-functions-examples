@@ -1,5 +1,4 @@
-
-service: PagerApp
+service: PagerDutyConnect
 
 provider:
   name: spotinst
@@ -7,18 +6,16 @@ provider:
     environment: {Your Environment ID} 
 
 functions:
-  PagerApp:
+  PagerDutyConnect:
     runtime: nodejs8.3
     handler: handler.main
     memory: 128
     timeout: 30
     access: public
-#     cron:  # Setup scheduled trigger with cron expression
-#      active: true
-#      value: '* * * * *'
-#    environmentVariables: {
-#      Key: "Value",
-#    }
+    environmentVariables: {
+      pagerToken: "Spotinst Account ID",
+      pagerKey: "Spotinst API Token"
+    }
 
 plugins:
   - serverless-spotinst-functions

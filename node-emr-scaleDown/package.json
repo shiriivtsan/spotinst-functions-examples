@@ -1,13 +1,13 @@
 {
-  "name": "DataDogEvent",
+  "name": "EMRScaleDown",
   "version": "1.0.0",
-  "description": "This Function will be called based on the alarms you set in your Elastigroup. It then connects to data dog to post the event type",
+  "description": "This is a simple node project that allows you to connect to the Spotinst API and scale down your EMR Elastigroup",
   "main": "handler.js",
   "keywords": [
     "serverless",
     "spotinst"
   ],
-  "template":false,
+  "template":true,
   "devDependencies": {
     "serverless-spotinst-functions": "*"
   },

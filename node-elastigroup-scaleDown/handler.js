@@ -8,10 +8,10 @@ credentials below.
 */
 module.exports.main = function main (event, context, callback) {
 	// Spotinst Credentials
-	let account = {Your Account ID}
-	let token = {Your API Token}
-	let group = {Your Group ID}
-	let adjustment = {Ammount To Scale}
+	let account = process.env['accountId']
+	let token = process.env['token']
+	let group = process.env['groupId']
+	let adjustment = process.env['adjustment']
 
 	// Options for scaling down elastigroup
 	let options = {

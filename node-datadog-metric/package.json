@@ -1,12 +1,13 @@
 {
-  "name": "spotionst-nodejs",
+  "name": "DataDogMetric",
   "version": "1.0.0",
-  "description": "Spotinst Functions NodeJS sample for serverless framework service.",
+  "description": "This function we will connect your Elastigroups to Data Dog to send a report every minute to Data Dog on the number of Spot and On-Demand instances you have for each of your Elastigroups in your account as a metric.",
   "main": "handler.js",
   "keywords": [
     "serverless",
     "spotinst"
   ],
+  "template":true,
   "devDependencies": {
     "serverless-spotinst-functions": "*"
   },

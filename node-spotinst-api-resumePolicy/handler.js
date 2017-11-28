@@ -1,18 +1,18 @@
 /*
-This function will suspend one of your Elastigroups policy. All you need is to enter
+This function will unsuspend one of your Elastigroups policy. All you need is to enter
 in your account ID, Spotinst token, group name and policy name. You can also set this
-function on a timer so it will automatically suspend a policy on a regualr interval.
+function on a timer so it will automatically unsuspend a policy on a regualr interval.
 */
 var rp = require('request-promise');
 
 module.exports.main = function main (event, context, callback) {
-	let token = {Your Token}
-	let account = {Your Account ID}
-	let group = {Your Group ID}
-	let policyName = {Your Policy Name}
-
+	let token = process.env['spotToken']
+	let account = process.env['spotAccount']
+	let group = process.env['spotGroup']
+	let policyName = process.env['spotPolicy']
+	
 	let options = {
-		uri:'https://api.spotinst.io/aws/ec2/group/' + group + '/scale/suspendPolicy',
+		uri:'https://api.spotinst.io/aws/ec2/group/' + group + '/scale/resumePolicy',
 		method: 'POST',
 		qs: {accountId: account,
 		     policyName: policyName},

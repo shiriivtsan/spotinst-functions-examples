@@ -8,10 +8,10 @@ To get this function to work simply add in your Spotinst credentials below.
 */
 module.exports.main = function main (event, context, callback) {
 	// Spotinst credentials
-	let account = {Your Account ID}
-	let token = {Your API Token}
-	let group = {Your Group ID}
-	let adjustment = {Ammount To Scale}
+	let account = process.env['accountId']
+	let token = process.env['token']
+	let group = process.env['groupId']
+	let adjustment = process.env['adjustment']
 
 	// options for request to scale up Elastigroup
 	let options = {

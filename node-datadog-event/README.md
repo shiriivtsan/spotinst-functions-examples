@@ -1,4 +1,4 @@
-# Connect Elastigroup to Data Dog Events and Metrics
+# Connect Elastigroup to Data Dog Events
 
 This project we will connect your Elastigroups to Data Dog to send an event notification when you add, delete or have an unhealthy instance.
 
@@ -36,7 +36,7 @@ First you will need to fork this repository and set it up on your local machine.
 npm install
 ```
 
-Once this has been completed navigate to the handler.js files to input your Data Dog credentials. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
+Once this has been completed you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
 
 ## Deployment
 
@@ -47,6 +47,12 @@ sls deploy
 ```
 
 The first time you run this command your new function will be created and linked to your Spotinst account under the environment that you specified. You can check this on the Spotinst Functions console. 
+
+## Environment Variables
+
+After the project has been deployed you will need to enter you Data Dog API token as an environment variable. To do this go to your function on the Spotinst Console and find the variable key `datadogAPI` then enter the value followed by pressing Update Function.
+
+**Warning:** If you edit your code then re-deploy the function your environment variables will get over written. To stop this from happening delete the list of environment variables from the `serverless.yml` file after the first deploy
 
 ## Setting Up Trigger
 

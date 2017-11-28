@@ -1,18 +1,18 @@
-# Connect Elastigroup to Data Dog Metrics
+# Scale Down EMR Elastigroups
 
-This project we will connect your Elastigroups to Data Dog to send a report every minute to Data Dog on the number of instances you have as a metric.
+This function will connect to your EMR Elastigroups and can scale it down. 
 
 ## Download
 
 To download this project as a template for your own Spotinst Function please use this command
 
 ```bash
-serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-datadog-connect
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-emr-scaleDown
 ```
 
 ### Prerequisites
 
-You will need to have the serverless framework installed, your Spotinst credentials set up and you will need Data Dog account in order to run this project. 
+You will need to have the serverless framework installed, your Spotinst credentials set up, environment ID and account ID in order to run this project. 
 
 First you will want to install the serverless framework onto your local machine using the terminal command
 
@@ -24,19 +24,17 @@ Once this has finished downloading you will have to set up your credentials to l
 
 You will also need your environment ID for your function. This can be found on the Spotinst console under the Serverless Functions tab. Select the application you wish to deploy this funciton to and locate the environment that you wish to use. Copy the environment ID and save this for later use
 
-Next you will need an API key from Data Dog. 
-
 The last thing you will need is your account ID which can be found in the Spotinst console under user setting. Save this for later use. 
 
 ### Installing
 
-First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin, the request and the request promise libraries by running this command inside the project repository:
+First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin by running this command:
 
 ```bash
 npm install
 ```
 
-Once this has been completed will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
+Once this has been completed you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
 
 ## Deployment
 
@@ -50,12 +48,21 @@ The first time you run this command your new function will be created and linked
 
 ## Environment Variables
 
-After the project has been deployed you will need to enter you Data Dog API token, Spotinst Token and Spotinst Account ID as environment variables. To do this go to your function on the Spotinst Console and find the variable key `datadogAPI`, `spotToken`, `spotAccount` then enter the value for each of these followed by press Update Function.
+After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `spotAccount`, `spotToken`, `spotEMR`, and `adjustment` then enter the value for each of these followed by press Update Function.
 
 **Warning:** If you edit your code then re-deploy the function your environment variables will get over written. To stop this from happening delete the list of environment variables from the `serverless.yml` file after the first deploy
 
-## Setting Up Timer
+## Testing
 
-The timer function is meant to run on a schedule using the cron function in the serverless.yml file. Use the [cron function reference](https://crontab.guru/) for help on setting up your cron function to select how many times you want the function to check your Elastigroup and post to Data Dog
+To test if this is working use the command:
 
+```bash
+sls invoke -f ScaleDown
+```
+
+Or you can use the test feature on the Spoinst console. Either way you should see "Succes" if it executed properly or "400 Error: Check Logs"
+
+## Set Timer
+
+If you want you can set this function up to run on a schedule using the cron function in the serverless.yml file. Use the [cron function reference](https://crontab.guru/) for help on setting up your cron function. 
 

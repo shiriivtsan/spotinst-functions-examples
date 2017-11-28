@@ -1,4 +1,4 @@
-service: DataDogMetric
+service: ResumeScalingPolicy
 
 provider:
   name: spotinst
@@ -6,19 +6,16 @@ provider:
     environment: {Your Environment ID}
 
 functions:
-  DataDogMetric:
+  ResumeScalingPolicy:
     runtime: nodejs8.3
     handler: handler.main
     memory: 128
     timeout: 30
-    access: public
-    cron:  
-     active: true
-     value: '/1 * * * *'
     environmentVariables: {
-      datadogAPI: "Your Data Dog API Token",
-      spotToken: "Your Spotinst Token",
-      spotAccount: "Your Spotinst Account ID"
+      spotToken: "Spotinst API Token",
+      spotAccount: "Spotinst Account ID",
+      spotGroup: "Elastigroup ID",
+      spotPolicy: "Scaling Policy Name"
     }
 
 plugins:
