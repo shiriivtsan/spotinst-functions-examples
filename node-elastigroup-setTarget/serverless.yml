@@ -1,4 +1,4 @@
-service: Suspend-Scaling-Policy
+service: Elastigroup-Set-Target
 
 provider:
   name: spotinst
@@ -6,17 +6,19 @@ provider:
     environment: {Your Environment ID}
 
 functions:
-  SuspendScalingPolicy:
+  ElastigroupSetTarget:
     runtime: nodejs8.3
-    handler: handler.main
+    handler: index.main
     memory: 128
     timeout: 30
-    access: public
+    access: private
     environmentVariables: {
-      spotToken: "Spotinst API Token",
       spotAccount: "Spotinst Account ID",
+      spotToken: "Spotinst API Token",
       spotGroup: "Elastigroup ID",
-      spotPolicy: "Scaling Policy Name"
+      max: "Max number of capacity units",
+      min: "Min number of capacity units",
+      target: "Target number of capacity units"
     }
 
 plugins:

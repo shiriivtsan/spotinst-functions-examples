@@ -1,0 +1,18 @@
+{
+  "name": "EMRSetTarget",
+  "version": "1.0.0",
+  "description": "This function allows you to set the capacity limits for your EMR Elastigroup",
+  "main": "index.js",
+  "keywords": [
+    "serverless",
+    "spotinst"
+  ],
+  "template":true,
+  "devDependencies": {
+    "serverless-spotinst-functions": "*"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}

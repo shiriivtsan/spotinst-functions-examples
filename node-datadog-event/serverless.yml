@@ -1,4 +1,4 @@
-service: DataDogEvent
+service: Datadog-Event
 
 provider:
   name: spotinst

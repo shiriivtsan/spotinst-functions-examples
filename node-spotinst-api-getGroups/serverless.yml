@@ -1,11 +1,4 @@
-# Welcome to Serverless!
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
-
-service: api-request-node
+service: Get-Elastigroups
 
 provider:
   name: spotinst
@@ -19,12 +12,6 @@ functions:
     memory: 128
     timeout: 30
     access: public
-#    cron:
-#      active: false
-#      value: '*/1 * * * *'
 
-
-# extend the framework using plugins listed here:
-# https://github.com/serverless/plugins
 plugins:
   - serverless-spotinst-functions

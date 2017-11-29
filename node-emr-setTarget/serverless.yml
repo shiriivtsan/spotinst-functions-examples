@@ -1,14 +1,14 @@
-service: EMR-Scale-Down
+service: EMR-Set-Target
 
 provider:
   name: spotinst
   spotinst:
-    environment: {Your Envionment ID}
+    environment: {Your Environment ID}
 
 functions:
-  EMRScaleDown:
+  EMRSetTarget:
     runtime: nodejs8.3
-    handler: handler.main
+    handler: index.main
     memory: 128
     timeout: 30
     access: private
@@ -16,7 +16,9 @@ functions:
       spotAccount: "Spotinst Account ID",
       spotToken: "Spotinst API Token",
       spotEMR: "EMR Elastigroup ID",
-      adjustment: "Ammount to Scale"
+      max: "Max number of capacity units",
+      min: "Min number of capacity units",
+      target: "Target number of capacity units"
     }
 
 plugins:

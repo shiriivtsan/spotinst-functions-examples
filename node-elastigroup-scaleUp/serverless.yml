@@ -1,9 +1,9 @@
-service: ElastigroupScaleUp
+service: Elastigroup-Scale-Up
 
 provider:
   name: spotinst
   spotinst:
-    environment: {Your Environment Variable}
+    environment: {Your Environment ID}
 
 functions:
   ElastigroupScaleUp:

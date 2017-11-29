@@ -1,11 +1,4 @@
-# Welcome to Serverless!
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
-
-service: sql-project
+service: MySQL-Connect
 
 provider:
   name: spotinst
