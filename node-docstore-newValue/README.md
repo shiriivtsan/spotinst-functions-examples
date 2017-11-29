@@ -63,7 +63,4 @@ sls invoke -f DocStoreNewValue
 
 Or you can use the test feature on the Spoinst console. Either way you should see "Succes" if it executed properly or "400 Error: Check Logs"
 
-## Set Timer
-
-If you want you can set this function up to run on a schedule using the cron function in the serverless.yml file. Use the [cron function reference](https://crontab.guru/) for help on setting up your cron function. 
 
