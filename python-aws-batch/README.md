@@ -1,6 +1,6 @@
 # Connect Elastigroups with AWS Batch Queue
 
-This function will connect to your AWS batch queue and check the memory and vcpus that are required for the jobs waiting in the "RUNNABLE" queue. If those numbers are above a certain threshold it will scale up your Elasigroup. If there are no more jobs left in "RUNNABLE" and "RUNNING" then it will scale down your Elastigroup. 
+This function will connect to your AWS batch queue and check the memory and vcpus that are required for the jobs waiting in the "RUNNABLE" queue. Then it will scale your Elastigroup based on the users choice of either memory or vcpus. It will only change the target value and not the minimum or maximum so the group cannot scale outside of your set boundaries.
 
 ## Download
 
@@ -13,7 +13,7 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 
 ### Prerequisites
 
-You will need to have the serverless framework installed, your Spotinst credentials set up and you will need MySQL database credentials, environment ID and account ID in order to run this project. 
+You will need to have the serverless framework installed, your Spotinst credentials set up and you will need AWS credentials, environment ID and account ID in order to run this project. 
 
 First you will want to install the serverless framework onto your local machine using the terminal command
 
@@ -25,8 +25,6 @@ Once this has finished downloading you will have to set up your credentials to l
 
 You will also need your environment ID for your function. This can be found on the Spotinst console under the Serverless Functions tab. Select the application you wish to deploy this funciton to and locate the environment that you wish to use. Copy the environment ID and save this for later use
 
-Additionally you will need to have your MySQL `host`, `username`, `database`, and `password` to gain access to your data table.
-
 The last thing you will need is your account ID which can be found in the Spotinst console under user setting. Save this for later use. 
 
 ### Installing
@@ -37,11 +35,12 @@ First you will need to fork this repository and set it up on your local machine.
 npm install
 ```
 
-Then you will need to have the boto3 and requests SDK installed into your project directory so you will need to run this command in the root directory for your project
+Then you will need to have the boto3, os, and requests SDK installed into your project directory so you will need to run this command in the root directory for your project
 
 ```bash
 pip install boto3 -t /path/to/project-dir
 pip install requests -t /path/to/project-dir
+pip install os -t /path/to/project-dir
 ```
 
 Once this has been completed navigate to the handler.py file and input your Spotinst and AWS credentials. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
@@ -56,15 +55,20 @@ sls deploy
 
 The first time you run this command your new function will be created and linked to your Spotinst account under the environment that you specified. You can check this on the Spotinst Functions console. 
 
+## Environment Variables
+
+After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `spotAccount`, `spotToken`, `spotGroup`, `min`, `max` and `target` then enter the value for each of these followed by press Update Function.
+
+**Warning:** If you edit your code then re-deploy the function your environment variables will get over written. To stop this from happening delete the list of environment variables from the `serverless.yml` file after the first deploy
+
 ## Testing
 
 To test if this is working use the command:
 
 ```bash
-sls invoke -f CheckBatch
+sls invoke -f AWSCheckBatch
 ```
 
-Or you can use the test feature on the Spoinst console. Either way you should see "No Change", "Scale Up", or "Scale Down" depenging on what the appropriate course of action at that time.
 
 ## Set Timer
 

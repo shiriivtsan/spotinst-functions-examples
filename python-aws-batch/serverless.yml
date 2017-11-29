@@ -6,12 +6,22 @@ provider:
     environment: {Your Environment ID} 
 
 functions:
-  CheckBatch:
+  AWSCheckBatch:
     runtime: python2.7
     handler: handler.main
     memory: 128
     timeout: 30
     access: private
+    environmentVariables: {
+      spotGroup: "Elastigroup ID",
+      spotAccount: "Spotinst Account ID",
+      spotToken: "Spotinst API Token",
+      AWSaccount: "AWS Account ID",
+      AWSsecret: "AWS Secret Token",
+      AWSregion: "Region for Batch Queue",
+      AWSqueue: "Name of Batch Queue",
+      capacityType: "Either memory or vcpu"
+    }
 
 plugins:
   - serverless-spotinst-functions

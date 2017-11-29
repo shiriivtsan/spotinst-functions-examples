@@ -48,7 +48,7 @@ The first time you run this command your new function will be created and linked
 
 ## Environment Variables
 
-After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `spotAccount`, `spotToken`, `spotGroup`, `min`, `max` and `target` then enter the value for each of these followed by press Update Function.
+After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `spotGroup`, `spotAccount`, `spotToken`, `AWSaccount`, `AWSsecret`, `AWSregion`, `AWSqueue`, and `capacityType` then enter the value for each of these followed by press Update Function.
 
 **Warning:** If you edit your code then re-deploy the function your environment variables will get over written. To stop this from happening delete the list of environment variables from the `serverless.yml` file after the first deploy
 

@@ -1,6 +1,7 @@
 import boto3
 import requests
 import json
+import os
 
 """
 This function checks the batch queue for the jobs that are in the RUNNING queue
@@ -21,116 +22,163 @@ def checkBatchSize(runnable, batch):
 	for element in runnable['jobSummaryList']:	
 		jobs.append(element['jobId'])
 
-	response = batch.describe_jobs(jobs=jobs)
+	if(len(jobs)==0):
+		return[0,0]
 
+	response = batch.describe_jobs(jobs=jobs)
+	
 	for jobs in response['jobs']:
 		memory += jobs['container']['memory']
 		vcpu += jobs['container']['vcpus']
-	print(memory)
-	print(vcpu)
 
-	return memory>60 and vcpu>4
+	return [memory, vcpu]
 
 """
-This function is called if you want to scale down your Elastigroup
+This function will get the current metircs of your Elastigroup so it wont scale beyond the
+limits that are set
 
 Args:
-	group:        Group ID needed to make the request
-	account:      Account ID needed to make the request 
-	headers:      Headers needed to make the request
-	requests:     Library used to create a put request to scale Elastigroup
-	json:         Library used to parse the output from the put request
+	goup:     This is the Elastigroup ID
+	account:  This is the account number for the group you want to access
+	headers:  This holds the required headers for the API request
+	requests: This module will allow you to make requests to the Spotinst API
+	json:     This module will load the response into a json format to be parsed
 Return:
-	statusCode:   The status code for the function 200 if ok 400 if error
-	outputString: The output string that is displayed to the console
+	minimum:  The minimum capacity limit on the elastigroup
+	maximum:  The maximum capacity limit on the elastigroup
+	target:   The target capacity limit on the elastigroup
 """
-def scaleDown(group, account, headers, requests, json):
-	statusCode = 200
-	outputString = "Scaling Down"
-	scaleDownUrl = "https://api.spotinst.io/aws/ec2/group/"+group+"/scale/down"
-	data = {'accountId':account, 'adjustment':'1'}
+def getCurrentMetrics(group, account, headers, requests, json):
+	getGroupURL = "https://api.spotinst.io/aws/ec2/group/"+group
+	data = {'accountId':account}
+	r = requests.get(getGroupURL, headers=headers, params=data)
+	capacity = json.loads(r.text)['response']['items'][0]['capacity']
 
-	r = requests.put(scaleDownUrl, headers=headers, params=data)
-	statusCheck = json.loads(r.text)['response']['status']['code']
-	print(statusCheck)
-
-	if statusCheck!=200:
-		statusCode = 400
-		if statusCheck==400:
-			outputString = "Cannot Scale Down: Check Elatigroup"
-		else:
-			outputString = "Access Denied Error: Check Logs"
-
-	return [statusCode, outputString]
+	return [capacity['minimum'], capacity['maximum'], capacity['target']]
 
 """
-This function is called if you want to scale up your Elastigroup
+This function will change the target in the capacity limits of the Elastigroup but wont change
+the set maximum or minimum allowing the group to scale up or down depending on the batch queue
 
 Args:
-	group:        Group ID needed to make the request
-	account:      Account ID needed to make the request 
-	headers:      Headers needed to make the request
-	requests:     Library used to create a put request to scale Elastigroup
-	json:         Library used to parse the output from the put request
-Return:
-	statusCode:   The status code for the function 200 if ok 400 if error
-	outputString: The output string that is displayed to the console
+	goup:     This is the Elastigroup ID
+	account:  This is the account number for the group you want to access
+	headers:  This holds the required headers for the API request
+	requests: This module will allow you to make requests to the Spotinst API
+	scaleTarget: New target value for the Elastigroup based on the Batch queue
+	currentMin:  Current minimum capacity limit
+	currentMax:  Current maximum capacity limit
 """
-def scaleUp(group, account, headers, requests, json):
-	statusCode = 200
-	outputString="Scaling Up"
-	scaleUpUrl = "https://api.spotinst.io/aws/ec2/group/"+group+"/scale/up"
-	data = {'accountId':account, 'adjustment':'1'}
-
-	r = requests.put(scaleUpUrl, headers=headers, params=data)
-	statusCheck = json.loads(r.text)['response']['status']['code']
-	print(statusCheck)
-
-	if statusCheck!=200:
-		statusCode = 400
-		if statusCheck==400:
-			outputString = "Cannot Scale Up: Check Elastigroup"
-		else:
-			outputString = "Access Denied Error: Check Logs"
-
-	return [statusCode, outputString]
+def scaleGroup(group, account, headers, requests, scaleTarget, currentMin, currentMax):
+	updateGroupURL = "https://api.spotinst.io/aws/ec2/group/"+group
+	data = {'accountId':account}
+	json = {"group": {"capacity": {"target": scaleTarget,"minimum": currentMin,"maximum": currentMax}}}
+	print(json)
+	r = requests.put(updateGroupURL, headers=headers, params=data, json=json)
+	print(r.text)
 
 """
-This function is used to check if the jobs that are in you batch queue and see if you should
-either scale up or down your elastigroups based on the ammount of memory and vcpu's needed
-for the upcoming jobs
+This function will change the weighted capacity variable for the spot instances that the user
+has selected. This is required for the dynamic auto scaling to work properly. The user has the 
+option to change the scaling variable to be either memeory or vcpu
 
-Return: 
-	(Serverless Object): Serverless object that will have a status code 400 if there
-	                     was an error executing the code or 200 if not
+Args:
+	goup:         This is the Elastigroup ID
+	account:      This is the account number for the group you want to access
+	headers:      This holds the required headers for the API request
+	requests:     This module will allow you to make requests to the Spotinst API
+	json:         This module will load the response into a json format to be parsed
+	instanceData: This is the JSON that holds all the instance types and their memory and vcpu
+	capacityType: This variable holds the users choice to either use memory or vcpus
+"""
+def setCapacity(requests, group, account, headers, json, instanceData, capacityType):
+	getGroupURL = "https://api.spotinst.io/aws/ec2/group/"+group
+	updateGroupURL = "https://api.spotinst.io/aws/ec2/group/"+group
+	data = {'accountId':account}
+	r = requests.get(getGroupURL, headers=headers, params=data)
+	instances = json.loads(r.text)['response']['items'][0]['compute']['instanceTypes']['spot']
+	weights = []
+
+	for spot in instances:
+		tempMem = float(instanceData[spot.split(".")[0]][spot.split(".")[1]]['memory'])
+		tempVcpu = float(instanceData[spot.split(".")[0]][spot.split(".")[1]]['vcpu'])	
+		if(capacityType=="memory"):
+			weightedCapacity = (1024)*tempMem
+		elif(capacityType=="vcpu"):
+			weightedCapacity= tempVcpu
+
+		tempInstance = {"instanceType": spot,"weightedCapacity": int(weightedCapacity)}	
+		weights.append(tempInstance)
+	
+	json = {"group": {"compute": {"instanceTypes": {"weights": weights}}}} 
+	r = requests.put(updateGroupURL, headers=headers, params=data, json=json)
+
+"""
+This function connects to your AWS batch, checks the running queue then will set capacity limits
+for your Elastigroup based on these metrics. For this to work we are using the Weighted Capacity
+feature of Elastigroups which means we are only able to either scale by vcpu or memory depending
+on the users choice.
 """
 def main(event, context):
+	# JSON that holds all the instance types and their metrics
+	with open('./instance.json') as json_data:
+		instanceData = json.loads(json_data.read())
+		json_data.close()
+
 	outputString="No Change"
 	statusCode = 200
 
 	# Spotinst Credentials
-	group = {Your Spotinst Elastigroup ID}
-	account = {Your Spotinst Account Number}
-	token = {Your Spotinst Token}
+	group = os.environ["spotGroup"]
+	account = os.environ["spotAccount"]
+	token = os.environ["spotToken"]
 	
 	# AWS Credentials
-	aws_account = {Your AWS Access Key}
-	aws_secret = {Your AWS Secret Key}
-	region = {Your Queue Region}
-	queue = {Name of Your Queue}
+	aws_account = os.environ["AWSaccount"]
+	aws_secret =os.environ["AWSsecret"]
+	region = os.environ["AWSregion"]
+	queue = os.environ["AWSqueue"]
+
+	# Users choice between memory or vcpu
+	capacityType = os.environ["capacityType"]
 	
 	headers = {'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'}
 
+	# Check the runable queue
 	batch = boto3.client('batch',region_name=region,aws_access_key_id=aws_account, aws_secret_access_key=aws_secret)
 	runnable = batch.list_jobs(jobQueue=queue, jobStatus="RUNNABLE")
-	running = batch.list_jobs(jobQueue=queue, jobStatus="RUNNING")
 
-	if len(runnable['jobSummaryList'])==0 and len(running['jobSummaryList'])==0:
-		[statusCode, outputString]= scaleDown(group, account, headers, requests, json)
+	# Set Elastigroup weighted capacity to either represent memeory or vcpu
+	setCapacity(requests, group, account, headers, json, instanceData, capacityType)
+
+	# Getting the metrics from AWS and Spotinst
+	[neededMemory, neededVCPU] = checkBatchSize(runnable, batch)
+	[currentMin, currentMax, currentTarget] = getCurrentMetrics(group, account, headers, requests, json)
+
+	print(neededVCPU, neededMemory)
+
+	if(neededMemory==0 and neededVCPU==0):
+		outputString = "scale to 0"
+		scaleGroup(group, account, headers, requests, 0, currentMin, currentMax)
 	else:
-		if checkBatchSize(runnable, batch):
-			[statusCode, outputString] = scaleUp(group, account, headers, requests, json)
+		# Chosing the target value
+		if(capacityType=="memory"):
+			target = int(neededMemory)
+		elif(capacityType=="vcpu"):
+			target = int(neededVCPU)
 
+		print(capacityType)
+		print(target)
+
+		if(target>currentMax):
+			target=currentMax
+			print(target)
+
+		# Scaling Elastigroup
+		scaleGroup(group, account, headers, requests, target, currentMin, currentMax)
+		outputString= "Scaling group. Target: " + str(target)
+
+	print(outputString)
 	return {
 		'statusCode': statusCode,
 		'body': outputString,
