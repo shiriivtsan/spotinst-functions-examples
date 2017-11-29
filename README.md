@@ -53,3 +53,5 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Slack Bot](./node-slack-bot) </br> This app will create a basic Slack bot that connects to your GitHub and message you once a week with a status update on your repos| nodeJS |
 |[Node Elastigroup-Data Dog Metrics](./node-datadog-metric) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Metrics to track your group| nodeJS |
 |[Node Elastigroup-Data Dog Events](./node-datadog-event) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Events to track your group| nodeJS |
+|[Node Get All Values From Document Store ](./node-docstore-getAll) </br> This function will allow you to get all the key value pairs from your document store in a specific region| nodeJS |
+|[Node Insert New Value Into Document Store](./node-docstore-newValue) </br> This function will allow you to insert a new value into your document store in a specific region| nodeJS |
