@@ -1,0 +1,24 @@
+service: Doc-Store-New-Value
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment ID}
+
+functions:
+  DocStoreNewValue:
+    runtime: nodejs8.3
+    handler: handler.main
+    memory: 128
+    timeout: 30
+    access: private
+    environmentVariables: {
+      spotAccount: "Spotinst Account ID",
+      spotToken: "Spotinst API Token",
+      spotEnvironment: "Spotinst Environment ID",
+      key: "Key to Enter in Document Store",
+      value: "Value to Enter in Document Store"
+    }
+
+plugins:
+  - serverless-spotinst-functions
