@@ -1,7 +1,7 @@
 {
   "name": "SuspendScalingPolicy",
   "version": "1.0.0",
-  "description": "This is a simple node project that allows you to connect to the Spotinst API and suspend scaling policies on your Elastigroup.",
+  "description": "This function will suspend one of your scaling policies on your Elastigroup",
   "main": "handler.js",
   "keywords": [
     "serverless",

@@ -1,7 +1,7 @@
 {
-  "name": "EMRScaleUp",
+  "name": "ElastigroupScaleUp",
   "version": "1.0.0",
-  "description": "This is a simple node project that allows you to connect to the Spotinst API and scale up your EMR Elastigroup",
+  "description": "This function will allow you to scale up one of your Elastigroups by a specific adjustement value",
   "main": "handler.js",
   "keywords": [
     "serverless",
