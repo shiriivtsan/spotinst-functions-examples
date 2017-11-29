@@ -1,4 +1,4 @@
-service: ElastigroupSetTarget
+service: Elastigroup-Set-Target
 
 provider:
   name: spotinst

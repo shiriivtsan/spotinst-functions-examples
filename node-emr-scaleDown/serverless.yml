@@ -1,9 +1,9 @@
-service: EMRScaleDown
+service: EMR-Scale-Down
 
 provider:
   name: spotinst
   spotinst:
-    environment: 
+    environment: {Your Envionment ID}
 
 functions:
   EMRScaleDown:

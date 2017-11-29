@@ -1,16 +1,9 @@
-# Welcome to Serverless!
-#
-# For full config options, check the docs:
-#    docs.serverless.com
-#
-# Happy Coding!
-
-service: RaffleApp
+service: Raffle-App
 
 provider:
   name: spotinst
   spotinst:
-    environment: env-f089dd26
+    environment: {Your Environment ID}
 
 functions:
   HomePage:
@@ -48,7 +41,6 @@ functions:
     timeout: 30
     access: public
 
-# extend the framework using plugins listed here:
-# https://github.com/serverless/plugins
+
 plugins:
   - serverless-spotinst-functions

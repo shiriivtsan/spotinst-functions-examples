@@ -1,4 +1,4 @@
-service: SuspendScalingPolicy
+service: Suspend-Scaling-Policy
 
 provider:
   name: spotinst

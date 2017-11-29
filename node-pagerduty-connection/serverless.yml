@@ -1,4 +1,4 @@
-service: PagerDutyConnect
+service: PagerDuty-Connect
 
 provider:
   name: spotinst

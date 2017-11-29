@@ -1,4 +1,4 @@
-service: DataDogMetric
+service: Datadog-Metric
 
 provider:
   name: spotinst

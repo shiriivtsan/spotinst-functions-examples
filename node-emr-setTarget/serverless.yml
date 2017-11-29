@@ -1,4 +1,4 @@
-service: EMRSetTarget
+service: EMR-Set-Target
 
 provider:
   name: spotinst
