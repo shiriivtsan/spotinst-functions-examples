@@ -36,8 +36,10 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Spotinst API Get All Elastigroups](./node-spotinst-api-getGroups) </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
 |[Node Spotinst Scale Down Elastigroups](./node-elastigroup-scaleDown) </br> This function will allow you to connect to your Elastigroup and scale it down. This is super useful if you hook them up to a timer to auto-scale for you| nodeJS |
 |[Node Spotinst Scale Up Elastigroups](./node-elastigroup-scaleUp) </br> This function will allow you to connect to your Elastigroup and scale it up. This is super useful if you hook them up to a timer to auto-scale for you| nodeJS |
+|[Node Spotinst Elastigroup Set Target](./node-elastigroup-setTarget) </br> This example will allow you to connect to your Elastigroup and set the target, min and max capacity limits| nodeJS |
 |[Node Spotinst EMR Scale Down](./node-emr-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| nodeJS |
 |[Node Spotinst EMR Scale Up](./node-emr-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| nodeJS |
+|[Node Spotinst EMR Set Target](./node-emr-setTarget) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| nodeJS |
 |[Node Spotinst API Suspend Scaling Policies](./node-spotinst-api-suspendPolicy) </br> This example shows you how to connect to the Spotinst API to suspend scaling policies on your elastigroups| nodeJS |
 |[Node Spotinst API Resume Scaling Policies](./node-spotinst-api-resumePolicy) </br> This example shows you how to connect to the Spotinst API to resume scaling policies on your elastigroups| nodeJS |
 |[Python Spotinst SDK Get All Elastigroups](./python-spotinst-sdk-getGroups) </br> This example shows you how to connect to the Spotinst SDK and return all the Elastigroups that were created in the past hour| Python |
