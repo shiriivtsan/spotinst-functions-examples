@@ -74,7 +74,7 @@ module.exports.main = function main (event, context, callback) {
 				<h1>Ride Requested</h1>
 	`
 
-	rp(getLyftVarst).then((res)=>{
+	rp(getLyftVars).then((res)=>{
 		variables = JSON.parse(res["response"]["items"][0]["value"])
 		rp(deleteLyftVars).then((res)=>{
 			rp(lyftOAuth(lyftID,lyftSecret)).then((res)=>{
