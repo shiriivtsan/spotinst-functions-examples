@@ -55,3 +55,5 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Elastigroup-Data Dog Events](./node-datadog-event) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Events to track your group| nodeJS |
 |[Node Get All Values From Document Store ](./node-docstore-getAll) </br> This function will allow you to get all the key value pairs from your document store in a specific region| nodeJS |
 |[Node Insert New Value Into Document Store](./node-docstore-newValue) </br> This function will allow you to insert a new value into your document store in a specific region| nodeJS |
+|[Lyft Web App](./node-lyft-webApp) </br> This services is three functions working together to allow you to request a lyft| nodeJS |
+

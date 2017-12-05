@@ -1,0 +1,17 @@
+{
+  "name": "LyftWebApp",
+  "version": "1.0.0",
+  "description": "Web application that allows you to request a Lyft",
+  "main": "handler.js",
+  "keywords": [
+    "serverless",
+    "spotinst"
+  ],
+  "devDependencies": {
+    "serverless-spotinst-functions": "*"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
