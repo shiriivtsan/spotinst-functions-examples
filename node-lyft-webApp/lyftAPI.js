@@ -74,9 +74,9 @@ module.exports.main = function main (event, context, callback) {
 				<h1>Ride Requested</h1>
 	`
 
-	rp(getVariable(spotEnvironment, spotToken, spotAccount)).then((res)=>{
+	rp(getLyftVarst).then((res)=>{
 		variables = JSON.parse(res["response"]["items"][0]["value"])
-		rp(deleteVariable(spotEnvironment, spotToken, spotAccount)).then((res)=>{
+		rp(deleteLyftVars).then((res)=>{
 			rp(lyftOAuth(lyftID,lyftSecret)).then((res)=>{
 				let authToken = res.access_token
 				rp(lyftRequest(authToken, variables["originLat"], variables["originLon"], variables["destLat"], variables["destLon"], variables["origin"], variables["destination"], variables["type"])).then((res)=>{
