@@ -1,6 +1,6 @@
 {
   "template": {
-    "name": "EMR Scale Down"
+    "name": "EMR Scale Down",
     "active": true,
     "section": "elastigroup",
     "order": 2
