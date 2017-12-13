@@ -1,9 +1,9 @@
 {
   "template": {
     "name": "EMR Scale Down",
-    "description": "",
+    "description": "This function will allow you to scale down one of your EMR Elastigroups by a specific adjustement value",
     "active": true,
     "section": "elastigroup",
-    "order": 2
+    "order": 1
   }
 }
