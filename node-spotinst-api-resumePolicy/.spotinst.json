@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Resume Scaling Policy",
+    "description": "This function will resume one of your scaling policies on your Elastigroup",
+    "active": true
+  }
+}

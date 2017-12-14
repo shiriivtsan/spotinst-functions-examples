@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Elastigroup Scale Up",
+    "description": "This function will allow you to scale up one of your Elastigroups by a specific adjustement value",
+    "active": true
+  }
+}

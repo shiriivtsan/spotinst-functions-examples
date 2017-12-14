@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Doc Store New Value",
+    "description": "This function will allow you to add a new value to your document store in a specific environment",
+    "active": true
+  }
+}
