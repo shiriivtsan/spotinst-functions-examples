@@ -45,14 +45,14 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Spotinst EMR Set Target](./node-emr-setTarget) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| nodeJS |
 
 |Spotinst Endpoint Examples | Runtime  |
-|:--------------------------- |:-----|
-|[Node Spotinst Add Endpoint Alias](./node-endpoint-addAlias) </br> This example will create a new endpoint alias for you function environment| nodeJS |
-|[Node Spotinst Add Endpoint Pattern](./node-endpoint-addPattern) </br> This example will create an endpoint pattern that maps to a specific function| nodeJS |
-|[Node Spotinst Delete Endpoint Alias](./node-endpoint-deleteAlias) </br> This example will delete a specific endpoint alias| nodeJS |
-|[Node Spotinst Delete Endpoint Pattern](./node-endpoint-deletePattern) </br> This example will a specific endpoint pattern| nodeJS |
-|[Node Spotinst Get All Endpoint Alias](./node-endpoint-getAlias) </br> This example will return all the alias in a specific environment| nodeJS |
-|[Node Spotinst Get All Endpoint Patterns](./node-endpoint-getPattern) </br> This example will return all the patterns in a specific environment| nodeJS |
-|[Node Spotinst Update Endpoint Pattern](./node-endpoint-updatePattern) </br> This example will allow you to update an existing endpoint pattern| nodeJS |
+|:-------------------------------------------------------- |:-----|
+|[Node Spotinst Add Endpoint Alias](./node-endpoint-addAlias) </br> This example will create a new endpoint alias for you function environment               | nodeJS |
+|[Node Spotinst Add Endpoint Pattern](./node-endpoint-addPattern) </br> This example will create an endpoint pattern that maps to a specific function        | nodeJS |
+|[Node Spotinst Delete Endpoint Alias](./node-endpoint-deleteAlias) </br> This example will delete a specific endpoint alias                                 | nodeJS |
+|[Node Spotinst Delete Endpoint Pattern](./node-endpoint-deletePattern) </br> This example will a specific endpoint pattern                                  | nodeJS |
+|[Node Spotinst Get All Endpoint Alias](./node-endpoint-getAlias) </br> This example will return all the alias in a specific environment                     | nodeJS |
+|[Node Spotinst Get All Endpoint Patterns](./node-endpoint-getPattern) </br> This example will return all the patterns in a specific environment             | nodeJS |
+|[Node Spotinst Update Endpoint Pattern](./node-endpoint-updatePattern) </br> This example will allow you to update an existing endpoint pattern             | nodeJS |
 
 |External Connection Examples | Runtime  |
 |:--------------------------- |:-----|
