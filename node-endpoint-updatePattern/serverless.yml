@@ -3,7 +3,7 @@ service: UpdatePattern
 provider:
   name: spotinst
   spotinst:
-    environment: env-ba6246f8
+    environment: {Your Environment}
 
 functions:
   UpdatePattern:

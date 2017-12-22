@@ -1,4 +1,4 @@
-service: GetAlias
+service: Java8SetGroupCapacity
 
 provider:
   name: spotinst
@@ -6,16 +6,19 @@ provider:
     environment: {Your Environment}
 
 functions:
-  GetAlias:
-    runtime: nodejs8.3
-    handler: handler.main
+  Java8SetGroupCapacity:
+    runtime: java8
+    handler: com.serverless.Handler
     memory: 128
     timeout: 30
     access: private
     environmentVariables: {
       spotAccount: "Spotinst Account ID",
       spotToken: "Spotinst API Token",
-      spotEnvironment: "Spotinst Environment ID"
+      spotGroup: "Spotinst Elastigroup ID",
+      target: "Scale Target",
+      min: "Scale Minimum",
+      max: "Scale Maximum"
     }
 
 plugins:

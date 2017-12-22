@@ -43,6 +43,10 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Spotinst EMR Scale Down](./node-emr-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| nodeJS |
 |[Node Spotinst EMR Scale Up](./node-emr-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| nodeJS |
 |[Node Spotinst EMR Set Target](./node-emr-setTarget) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| nodeJS |
+|[Java8 Spotinst EMR Scale Down](./java8-emr-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| Java8 |
+|[Java8 Spotinst EMR Scale Up](./java8-emr-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| Java8 |
+|[Java8 Spotinst EMR Set Target](./java8-emr-setCapacity) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| Java8 |
+
 
 |Spotinst Function Features Examples | Runtime  |
 |:--------------------------- |:-----|

@@ -1,0 +1,23 @@
+service: Elastigroup-Scale-Up
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment ID}
+
+functions:
+  ElastigroupScaleUp:
+    runtime: nodejs8.3
+    handler: handler.main
+    memory: 128
+    timeout: 30
+    access: private
+    environmentVariables: {
+      accountId: "Spotinst Account ID",
+      token: "Spotinst API Token",
+      groupId: "Elastigroup ID",
+      adjustment: "Ammount to Scale"
+    }
+
+plugins:
+  - serverless-spotinst-functions

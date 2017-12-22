@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Java 8 Elastigroup Scale Down",
+    "description": "This function will allow you to set the capacity for your Elastigroup using Java8",
+    "active": true
+  }
+}

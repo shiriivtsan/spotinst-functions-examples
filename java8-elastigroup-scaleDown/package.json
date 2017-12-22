@@ -1,0 +1,13 @@
+{
+  "name": "Java8ScaleDownElastigroup",
+  "version": "1.0.0",
+  "description": "This function will scale down your elastigroup using Java8",
+  "main": "com.serverless.Handler.java",
+  "keywords": [
+    "serverless",
+    "spotinst"
+  ],
+  "devDependencies": {
+    "serverless-spotinst-functions": "*"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ElastigroupScaleUp",
+  "version": "1.0.0",
+  "description": "This function will allow you to scale up one of your Elastigroups by a specific adjustement value",
+  "main": "handler.js",
+  "keywords": [
+    "serverless",
+    "spotinst"
+  ],
+  "template":true,
+  "devDependencies": {
+    "serverless-spotinst-functions": "*"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
