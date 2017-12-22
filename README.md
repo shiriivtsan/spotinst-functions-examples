@@ -31,7 +31,7 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 ```
 
 
-|Elastigroup & EMR Examples | Runtime  |
+|Spotinst Examples | Runtime  |
 |:--------------------------- |:-----|
 |[Node Spotinst API Get All Elastigroups](./node-spotinst-api-getGroups) </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
 |[Node Spotinst Scale Down Elastigroups](./node-elastigroup-scaleDown) </br> This function will allow you to connect to your Elastigroup and scale it down. This is super useful if you hook them up to a timer to auto-scale for you| nodeJS |
@@ -43,9 +43,6 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Spotinst EMR Scale Down](./node-emr-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| nodeJS |
 |[Node Spotinst EMR Scale Up](./node-emr-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| nodeJS |
 |[Node Spotinst EMR Set Target](./node-emr-setTarget) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| nodeJS |
-
-|Spotinst Endpoint Examples | Runtime  |
-|:-------------------------------------------------------- |:-----|
 |[Node Spotinst Add Endpoint Alias](./node-endpoint-addAlias) </br> This example will create a new endpoint alias for you function environment               | nodeJS |
 |[Node Spotinst Add Endpoint Pattern](./node-endpoint-addPattern) </br> This example will create an endpoint pattern that maps to a specific function        | nodeJS |
 |[Node Spotinst Delete Endpoint Alias](./node-endpoint-deleteAlias) </br> This example will delete a specific endpoint alias                                 | nodeJS |
