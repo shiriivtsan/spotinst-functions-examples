@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Doc Store Get All",
+    "description": "This function will return all the elments in your document store for a specific environment",
+    "active": true
+  }
+}

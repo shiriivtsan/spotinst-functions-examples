@@ -1,0 +1,31 @@
+{
+	"sections": [
+		{
+			"name": "Elastigroup",
+			"templates": [
+				"node-elastigroup-scaleDown",
+				"node-elastigroup-scaleUp",
+				"node-elastigroup-setTarget",
+				"node-spotinst-api-resumePolicy",
+				"node-spotinst-api-suspendPolicy",
+				"node-datadog-metric",
+				"node-pagerduty-connection"
+			]
+		},
+		{
+			"name": "EMR",
+			"templates": [
+				"node-emr-scaleDown",
+				"node-emr-scaleUp",
+				"node-emr-setTarget"
+			]
+		},
+		{
+			"name": "Functions",
+			"templates": [
+				"node-docstore-getAll",
+				"node-docstore-newValue"
+			]
+		}
+	]
+}

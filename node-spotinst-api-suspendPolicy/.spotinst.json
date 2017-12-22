@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Suspend Scaling Policy",
+    "description": "This function will suspend one of your scaling policies on your Elastigroup",
+    "active": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "EMR Set Target",
+    "description": "This function allows you to set the capacity limits for your EMR Elastigroup",
+    "active": true
+  }
+}

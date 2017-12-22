@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Datadog Metric",
+    "description": "This function we will connect your Elastigroups to Data Dog to send a report every minute to Data Dog on the number of Spot and On-Demand instances you have for each of your Elastigroups in your account as a metric",
+    "active": true
+  }
+}
