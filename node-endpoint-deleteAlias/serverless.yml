@@ -1,0 +1,23 @@
+service: DeleteAlias
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: env-ba6246f8
+
+functions:
+  DeleteAlias:
+    runtime: nodejs8.3
+    handler: handler.main
+    memory: 128
+    timeout: 30
+    access: private
+    environmentVariables: {
+      spotAccount: "Spotinst Account ID",
+      spotToken: "Spotinst API Token",
+      spotEnvironment: "Spotinst Environment ID",
+      spotAlias: "Alias ID to Delete"
+    }
+
+plugins:
+  - serverless-spotinst-functions

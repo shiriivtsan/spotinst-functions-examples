@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Add Endpoint Alias",
+    "description": "This function will allow you to connect your environment to a hosted Alias.",
+    "active": true
+  }
+}

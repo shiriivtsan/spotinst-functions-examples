@@ -38,9 +38,7 @@ npm install
 Then you will need to have the boto3, os, and requests SDK installed into your project directory so you will need to run this command in the root directory for your project
 
 ```bash
-pip install boto3 -t /path/to/project-dir
-pip install requests -t /path/to/project-dir
-pip install os -t /path/to/project-dir
+pip install -r requirements.txt -t /path/to/project-dir
 ```
 
 Once this has been completed navigate to the handler.py file and input your Spotinst and AWS credentials. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.

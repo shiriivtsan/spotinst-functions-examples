@@ -1,0 +1,25 @@
+service: UpdatePattern
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: env-ba6246f8
+
+functions:
+  UpdatePattern:
+    runtime: nodejs8.3
+    handler: handler.main
+    memory: 128
+    timeout: 30
+    access: private
+    environmentVariables: {
+      spotAccount: "Spotinst Account ID",
+      spotToken: "Spotinst API Token",
+      spotPattern: "Spotinst Pattern ID to Update",
+      method: "HTTP Request Method",
+      pattern: "Pattern After the Alias URL",
+      spotFunction: "Spotinst Function ID Maps to Pattern"
+    }
+    
+plugins:
+  - serverless-spotinst-functions

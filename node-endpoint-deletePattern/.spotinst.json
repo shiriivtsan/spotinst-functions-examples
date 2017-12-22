@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Delete Endpoint Pattern",
+    "description": "This function will delete a specific endpoint pattern",
+    "active": true
+  }
+}
