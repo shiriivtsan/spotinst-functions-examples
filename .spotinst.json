@@ -34,7 +34,7 @@
       "name": "Other",
       "templates": [
         "node-raffle-app",
-        "node-simple-chatbot",
+        "node-simple-chatbot"
       ]
     }
   ]
