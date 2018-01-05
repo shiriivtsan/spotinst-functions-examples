@@ -1,13 +1,13 @@
-# Set Elastigroup Targets
+# Get All Endpoint Patterns
 
-This function will connect to your Elastigroups and set the target, min and max capacity limits
+This function will return all the endpoint patterns in a specific environment.
 
 ## Download
 
 To download this project as a template for your own Spotinst Function please use this command
 
 ```bash
-serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-elastigroup-setTarget
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-endpoint-getPattern
 ```
 
 ### Prerequisites
@@ -48,22 +48,6 @@ The first time you run this command your new function will be created and linked
 
 ## Environment Variables
 
-After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `spotGroup`, `spotAccount`, `spotToken`, `target`, `min`, and `max` then enter the value for each of these followed by press Update Function.
+After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `spotAccount`, `spotToken`, and `spotEnvironment` then enter the value for each of these followed by press Update Function.
 
 **Warning:** If you edit your code then re-deploy the function your environment variables will get over written. To stop this from happening delete the list of environment variables from the `serverless.yml` file after the first deploy
-
-
-## Testing
-
-To test if this is working use the command:
-
-```bash
-sls invoke -f ElastigroupSetTarget
-```
-
-Or you can use the test feature on the Spoinst console. Either way you should see "Succes" if it executed properly or "400 Error: Check Logs"
-
-## Set Timer
-
-If you want you can set this function up to run on a schedule using the cron function in the serverless.yml file. Use the [cron function reference](https://crontab.guru/) for help on setting up your cron function. 
-

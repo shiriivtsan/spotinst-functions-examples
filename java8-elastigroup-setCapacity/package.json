@@ -1,0 +1,13 @@
+{
+  "name": "Java8ElastigroupSetCapacity",
+  "version": "1.0.0",
+  "description": "This function will set the capacity for your elastigroup using Java8",
+  "main": "com.serverless.Handler.java",
+  "keywords": [
+    "serverless",
+    "spotinst"
+  ],
+  "devDependencies": {
+    "serverless-spotinst-functions": "*"
+  }
+}

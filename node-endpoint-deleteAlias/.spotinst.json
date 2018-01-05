@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Delete Endpoint Alias",
+    "description": "This function will delete an exsisting Alias endpoint connection",
+    "active": true
+  }
+}

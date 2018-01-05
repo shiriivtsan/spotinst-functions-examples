@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Get All Endpoint Patterns",
+    "description": "This function will return all the endpoint patterns in a specific environment",
+    "active": true
+  }
+}

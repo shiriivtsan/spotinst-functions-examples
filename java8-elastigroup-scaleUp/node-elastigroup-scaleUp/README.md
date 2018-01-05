@@ -1,19 +1,18 @@
-# Connect Elastigroups with AWS Batch Queue
+# Scale Up Elastigroups
 
-This function will connect to your AWS batch queue and check the memory and vcpus that are required for the jobs waiting in the "RUNNABLE" queue. Then it will scale your Elastigroup based on the users choice of either memory or vcpus. It will only change the target value and not the minimum or maximum so the group cannot scale outside of your set boundaries.
+This function will connect to your Elastigroups and can scale up by a specific value. 
 
 ## Download
 
 To download this project as a template for your own Spotinst Function please use this command
 
 ```bash
-serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/python-aws-batch
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-elastigroup-scaleUp
 ```
-
 
 ### Prerequisites
 
-You will need to have the serverless framework installed, your Spotinst credentials set up and you will need AWS credentials, environment ID and account ID in order to run this project. 
+You will need to have the serverless framework installed, your Spotinst credentials set up, environment ID and account ID in order to run this project. 
 
 First you will want to install the serverless framework onto your local machine using the terminal command
 
@@ -35,13 +34,7 @@ First you will need to fork this repository and set it up on your local machine.
 npm install
 ```
 
-Then you will need to have the boto3, os, and requests SDK installed into your project directory so you will need to run this command in the root directory for your project
-
-```bash
-pip install -r requirements.txt -t /path/to/project-dir
-```
-
-Once this has been completed navigate to the handler.py file and input your Spotinst and AWS credentials. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
+Once this has been completed you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
 
 ## Deployment
 
@@ -55,18 +48,20 @@ The first time you run this command your new function will be created and linked
 
 ## Environment Variables
 
-After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `spotAccount`, `spotToken`, `spotGroup`, `min`, `max` and `target` then enter the value for each of these followed by press Update Function.
+After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `accountId`, `token`, `groupId`, and `adjustment` then enter the value for each of these followed by press Update Function.
 
 **Warning:** If you edit your code then re-deploy the function your environment variables will get over written. To stop this from happening delete the list of environment variables from the `serverless.yml` file after the first deploy
+
 
 ## Testing
 
 To test if this is working use the command:
 
 ```bash
-sls invoke -f AWSCheckBatch
+sls invoke -f ScaleUp
 ```
 
+Or you can use the test feature on the Spoinst console. Either way you should see "Succes" if it executed properly or "400 Error: Check Logs"
 
 ## Set Timer
 

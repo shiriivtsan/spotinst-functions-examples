@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Update Exsisting Endpoint Pattern",
+    "description": "This function will update an exisisting endpoint pattern",
+    "active": true
+  }
+}

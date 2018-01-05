@@ -1,0 +1,22 @@
+service: GetPattern
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment}
+
+functions:
+  GetPattern:
+    runtime: nodejs8.3
+    handler: handler.main
+    memory: 128
+    timeout: 30
+    access: private
+    environmentVariables: {
+      spotAccount: "Spotinst Account ID",
+      spotToken: "Spotinst API Token",
+      spotEnvironment: "Spotinst Environment ID"
+    }
+
+plugins:
+  - serverless-spotinst-functions

@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Add Endpoint Pattern",
+    "description": "This function allow you to connect your functions to a specfic pattern under an alias",
+    "active": true
+  }
+}

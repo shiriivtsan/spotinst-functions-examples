@@ -1,0 +1,7 @@
+{
+  "template": {
+    "name": "Get All Endpoint Alias",
+    "description": "This function will return all the endpoint alias in a specific environment",
+    "active": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "GetAllEndpointPatterns",
+  "version": "1.0.0",
+  "description": "This function will return all the endpoint patterns in a specific environment",
+  "main": "handler.js",
+  "keywords": [
+    "serverless",
+    "spotinst"
+  ],
+  "devDependencies": {
+    "serverless-spotinst-functions": "*"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}

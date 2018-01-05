@@ -1,0 +1,22 @@
+service: Java8ScaleDownGroup
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment}
+
+functions:
+  Java8ScaleDownGroup:
+    runtime: java8
+    handler: com.serverless.Handler
+    memory: 128
+    timeout: 30
+    access: private
+    environmentVariables: {
+      spotAccount: "Spotinst Account ID",
+      spotToken: "Spotinst API Token",
+      spotGroup: "Spotinst Elastigroup ID"
+    }
+
+plugins:
+  - serverless-spotinst-functions

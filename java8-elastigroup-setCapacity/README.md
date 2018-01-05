@@ -1,13 +1,13 @@
-# Set Elastigroup Targets
+# Set Elastigroup Capacity
 
-This function will connect to your Elastigroups and set the target, min and max capacity limits
+This function will connect to your Elastigroups and set the target, min and max capacity limits using Java8
 
 ## Download
 
 To download this project as a template for your own Spotinst Function please use this command
 
 ```bash
-serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-elastigroup-setTarget
+serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/java8-elastigroup-setTarget
 ```
 
 ### Prerequisites
@@ -36,6 +36,16 @@ npm install
 
 Once this has been completed you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
 
+## Packaging
+
+Before you can deploy a Java8 file you will need to first package it locally. To do this you will need `mvn` install locally on your computer. After this is done go to the pom.xml file and make sure that the finalName tag has the same value as the Service tag in the serverless.yml file. Then you simply use the command:
+
+```bash
+mvn package
+```
+
+**Warning:** If the values in the finalName tag in the pom.xml file and Service tag in the serverless.yml file do not match then you will not be able to deploy your function 
+
 ## Deployment
 
 Next you will want to deploy this function using this command:
@@ -46,12 +56,21 @@ sls deploy
 
 The first time you run this command your new function will be created and linked to your Spotinst account under the environment that you specified. You can check this on the Spotinst Functions console. 
 
+## Packaging
+
+Before you can deploy a Java8 file you will need to first package it locally. To do this you will need `mvn` install locally on your computer. After this is done go to the pom.xml file and make sure that the finalName tag has the same value as the Service tag in the serverless.yml file. Then you simply use the command:
+
+```bash
+mvn package
+```
+
+**Warning:** If the values in the finalName tag in the pom.xml file and Service tag in the serverless.yml file do not match then you will not be able to deploy your function 
+
 ## Environment Variables
 
 After the project has been deployed you will need to enter you Spotinst Account ID, Spotinst API token, Elastigroup ID and adjustment value as environment variables. To do this go to your function on the Spotinst Console and find the variable key `spotGroup`, `spotAccount`, `spotToken`, `target`, `min`, and `max` then enter the value for each of these followed by press Update Function.
 
 **Warning:** If you edit your code then re-deploy the function your environment variables will get over written. To stop this from happening delete the list of environment variables from the `serverless.yml` file after the first deploy
-
 
 ## Testing
 

@@ -31,18 +31,38 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 ```
 
 
-|Examples | Runtime  |
+|Spotinst Elastigroup & EMR Examples | Runtime  |
 |:--------------------------- |:-----|
 |[Node Spotinst API Get All Elastigroups](./node-spotinst-api-getGroups) </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
 |[Node Spotinst Scale Down Elastigroups](./node-elastigroup-scaleDown) </br> This function will allow you to connect to your Elastigroup and scale it down. This is super useful if you hook them up to a timer to auto-scale for you| nodeJS |
 |[Node Spotinst Scale Up Elastigroups](./node-elastigroup-scaleUp) </br> This function will allow you to connect to your Elastigroup and scale it up. This is super useful if you hook them up to a timer to auto-scale for you| nodeJS |
 |[Node Spotinst Elastigroup Set Target](./node-elastigroup-setTarget) </br> This example will allow you to connect to your Elastigroup and set the target, min and max capacity limits| nodeJS |
-|[Node Spotinst EMR Scale Down](./node-emr-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| nodeJS |
-|[Node Spotinst EMR Scale Up](./node-emr-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| nodeJS |
-|[Node Spotinst EMR Set Target](./node-emr-setTarget) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| nodeJS |
 |[Node Spotinst API Suspend Scaling Policies](./node-spotinst-api-suspendPolicy) </br> This example shows you how to connect to the Spotinst API to suspend scaling policies on your elastigroups| nodeJS |
 |[Node Spotinst API Resume Scaling Policies](./node-spotinst-api-resumePolicy) </br> This example shows you how to connect to the Spotinst API to resume scaling policies on your elastigroups| nodeJS |
 |[Python Spotinst SDK Get All Elastigroups](./python-spotinst-sdk-getGroups) </br> This example shows you how to connect to the Spotinst SDK and return all the Elastigroups that were created in the past hour| Python |
+|[Node Spotinst EMR Scale Down](./node-emr-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| nodeJS |
+|[Node Spotinst EMR Scale Up](./node-emr-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| nodeJS |
+|[Node Spotinst EMR Set Target](./node-emr-setTarget) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| nodeJS |
+|[Java8 Spotinst Elastigroup Scale Down](./java8-elastigroup-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| Java8 |
+|[Java8 Spotinst Elastigroup Scale Up](./java8-elastigroup-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| Java8 |
+|[Java8 Spotinst Elastigroup Set Target](./java8-elastigroup-setCapacity) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| Java8 |
+
+
+|Spotinst Function Features Examples | Runtime  |
+|:--------------------------- |:-----|
+|[Node Spotinst Add Endpoint Alias](./node-endpoint-addAlias) </br> This example will create a new endpoint alias for you function environment               | nodeJS |
+|[Node Spotinst Add Endpoint Pattern](./node-endpoint-addPattern) </br> This example will create an endpoint pattern that maps to a specific function        | nodeJS |
+|[Node Spotinst Delete Endpoint Alias](./node-endpoint-deleteAlias) </br> This example will delete a specific endpoint alias                                 | nodeJS |
+|[Node Spotinst Delete Endpoint Pattern](./node-endpoint-deletePattern) </br> This example will a specific endpoint pattern                                  | nodeJS |
+|[Node Spotinst Get All Endpoint Alias](./node-endpoint-getAlias) </br> This example will return all the alias in a specific environment                     | nodeJS |
+|[Node Spotinst Get All Endpoint Patterns](./node-endpoint-getPattern) </br> This example will return all the patterns in a specific environment             | nodeJS |
+|[Node Spotinst Update Endpoint Pattern](./node-endpoint-updatePattern) </br> This example will allow you to update an existing endpoint pattern             | nodeJS |
+|[Node Get All Values From Document Store ](./node-docstore-getAll) </br> This function will allow you to get all the key value pairs from your document store in a specific region| nodeJS |
+|[Node Insert New Value Into Document Store](./node-docstore-newValue) </br> This function will allow you to insert a new value into your document store in a specific region| nodeJS |
+
+
+|External Connection Examples | Runtime  |
+|:--------------------------- |:-----|
 |[Node MySQL Connection](./node-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| nodeJS |
 |[Python MySQL Connection](./python-mysql-connection) </br> This example shows you how to connect to a MySQL table and insert new values or return all the entries in your table| Python |
 |[Node Elastigroup-PagerDuty Connection](./node-pagerduty-connection) </br> You can use this function to connect your Elastigroup to PagerDuty to push notification when you launch and terminate instances as well as other supported notifications| nodeJS |
@@ -53,7 +73,5 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Slack Bot](./node-slack-bot) </br> This app will create a basic Slack bot that connects to your GitHub and message you once a week with a status update on your repos| nodeJS |
 |[Node Elastigroup-Data Dog Metrics](./node-datadog-metric) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Metrics to track your group| nodeJS |
 |[Node Elastigroup-Data Dog Events](./node-datadog-event) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Events to track your group| nodeJS |
-|[Node Get All Values From Document Store ](./node-docstore-getAll) </br> This function will allow you to get all the key value pairs from your document store in a specific region| nodeJS |
-|[Node Insert New Value Into Document Store](./node-docstore-newValue) </br> This function will allow you to insert a new value into your document store in a specific region| nodeJS |
 |[Lyft Web App](./node-lyft-webApp) </br> This services is three functions working together to allow you to request a lyft| nodeJS |
 
