@@ -1,31 +1,41 @@
 {
-	"sections": [
-		{
-			"name": "Elastigroup",
-			"templates": [
-				"node-elastigroup-scaleDown",
-				"node-elastigroup-scaleUp",
-				"node-elastigroup-setTarget",
-				"node-spotinst-api-resumePolicy",
-				"node-spotinst-api-suspendPolicy",
-				"node-datadog-metric",
-				"node-pagerduty-connection"
-			]
-		},
-		{
-			"name": "EMR",
-			"templates": [
-				"node-emr-scaleDown",
-				"node-emr-scaleUp",
-				"node-emr-setTarget"
-			]
-		},
-		{
-			"name": "Functions",
-			"templates": [
-				"node-docstore-getAll",
-				"node-docstore-newValue"
-			]
-		}
-	]
+  "sections": [
+    {
+      "name": "General",
+      "templates": [
+        "node-mysql-connection",
+        "python-mysql-connection"
+      ]
+    },
+    {
+      "name": "3rd Party Integration",
+      "templates": [
+        "python-aws-batch",
+        "node-alexa-skill",
+        "node-datadog-event",
+        "node-datadog-metric",
+        "node-lyft-webApp",
+        "node-pagerduty-connection",
+        "node-slack-bot"
+      ]
+    },
+    {
+      "name": "Elastigroup",
+      "templates": [
+        "node-elastigroup-scaleDown",
+        "node-elastigroup-scaleUp",
+        "node-elastigroup-setTarget",
+        "node-spotinst-api-resumePolicy",
+        "node-spotinst-api-suspendPolicy",
+        "python-spotinst-sdk-getGroups"
+      ]
+    },
+    {
+      "name": "Other",
+      "templates": [
+        "node-raffle-app",
+        "node-simple-chatbot"
+      ]
+    }
+  ]
 }
