@@ -74,4 +74,4 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Elastigroup-Data Dog Metrics](./node-datadog-metric) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Metrics to track your group| nodeJS |
 |[Node Elastigroup-Data Dog Events](./node-datadog-event) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Events to track your group| nodeJS |
 |[Lyft Web App](./node-lyft-webApp) </br> This services is three functions working together to allow you to request a lyft| nodeJS |
-
+|[Twitter Vision App](./node-twitter-vision) </br> This services is three functions working together to allow you to capture tweets that have an image and contain any word you want | nodeJS |
