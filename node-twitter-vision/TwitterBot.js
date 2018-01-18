@@ -3,7 +3,7 @@ const rp = require('request-promise')
 
 function setRequest(imageInfo){
 	return rp({
-		uri:'https://app-d1ecaf45-twitterbot-execute-function1.spotinst.io/fx-a8a2a1bc',
+		uri:{Your Picture Function URL},
 		method:'POST',
 		qs:{imageInfo:imageInfo.toString()},
 		json:true
