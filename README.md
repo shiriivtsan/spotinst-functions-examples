@@ -29,12 +29,14 @@ Example:
 serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-getGroups
 ```
 
+    <style>
     .menu-group{
     	display:inline-block;
     }
     .single-menu{
     	width: 25%
     }
+    </style>
 
 <div class="menu-group">
 	<div class="single-menu">
@@ -55,6 +57,7 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 	</div>
 	<div class="single-menu">
 		<h1>Spotinst Connection</h1>
+
 	</div>
 	<div class="single-menu">
 		<h1>Outside Connection</h1>
