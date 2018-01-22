@@ -4,7 +4,7 @@ title: Endpoints
 
 # Spotinst Endpoints Examples
 
-[Back Home](./README)
+[Back Home](./)
  
 |:--------------------------- |
 |[Add Endpoint Alias](./node-endpoint-addAlias)  This example will create a new endpoint alias for you function environment               |

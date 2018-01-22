@@ -4,7 +4,7 @@ title: Python
 
 # Python Function Examples
 
-[Back Home](./README)
+[Back Home](./)
 
 |:--------------------------- |
 |[Get All Elastigroups](./python-spotinst-sdk-getGroups)  This example shows you how to connect to the Spotinst SDK and return all the Elastigroups that were created in the past hour|

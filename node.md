@@ -4,7 +4,7 @@ title: Node
 
 # Node Function Examples
 
-[Back Home](./README)
+[Back Home](./)
 
 |Node Functions| 
 |:--------------------------- |

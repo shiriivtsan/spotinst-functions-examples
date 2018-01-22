@@ -4,7 +4,7 @@ title: DocumentStore
 
 # Document Store Examples
 
-[Back Home](./README)
+[Back Home](./)
 
 |Node Functions| 
 |:--------------------------- |
