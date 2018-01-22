@@ -29,14 +29,14 @@ Example:
 serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-getGroups
 ```
 
-    <style>
-    .menu-group{
-    	display:inline-block;
-    }
-    .single-menu{
-    	width: 25%
-    }
-    </style>
+<style>
+.menu-group{
+	display:inline-block;
+}
+.single-menu{
+	width: 25%
+}
+</style>
 
 <div class="menu-group">
 	<div class="single-menu">
