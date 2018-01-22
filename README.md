@@ -53,7 +53,7 @@ li{
 	<div class="single-menu">
 		<h3>Hello World</h3>
 		<ul>
-			<a href="./node-hello-world.md"><li>Node</li></a>
+			<a href="./node-hello-world"><li>Node</li></a>
 			<a href="./python-hello-world.md"><li>Python</li></a>
 			<a href="./java8-hello-world.md"><li>Java8</li></a>
 		</ul>
@@ -61,24 +61,24 @@ li{
    	<div class="single-menu">
 		<h3>Languages</h3>
 		<ul>
-			<a href="./node.md"><li>Node</li></a>
-			<a href="./python.md"><li>Python</li></a>
-			<a href="./java8.md"><li>Java8</li></a>
+			<a href="./node"><li>Node</li></a>
+			<a href="./python"><li>Python</li></a>
+			<a href="./java8"><li>Java8</li></a>
 		</ul>
 	</div>
 	<div class="single-menu">
 		<h3>Spotinst Connection</h3>
-			<a href="./endpoints.md"><li>Endpoints</li></a>
-			<a href="./document-store.md"><li>Document Store</li></a>
-			<a href="./emr.md"><li>EMR</li></a>
-			<a href="./elastigroup.md"><li>Elastigroup</li></a>
+			<a href="./endpoints"><li>Endpoints</li></a>
+			<a href="./document-store"><li>Document Store</li></a>
+			<a href="./emr"><li>EMR</li></a>
+			<a href="./elastigroup"><li>Elastigroup</li></a>
 	</div>
 	<div class="single-menu">
 		<h3>Outside Connection</h3>
 			<a href="./node-twitter-vision"><li>Twitter</li></a>
 			<a href="./node-lyft-webApp"><li>Lyft</li></a>
 			<a href="./node-pagerduty-connection"><li>PagerDuty</li></a>
-			<a href="./datadog.md"><li>DataDog</li></a>
+			<a href="./datadog"><li>DataDog</li></a>
 	</div>
 </div>
 

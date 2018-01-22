@@ -3,8 +3,7 @@ title: Endpoints
 ---
 
 # Spotinst Endpoints Examples
-
-|Node Functions| 
+ 
 |:--------------------------- |
 |[Add Endpoint Alias](./node-endpoint-addAlias) </br> This example will create a new endpoint alias for you function environment               |
 |[Add Endpoint Pattern](./node-endpoint-addPattern) </br> This example will create an endpoint pattern that maps to a specific function        |
