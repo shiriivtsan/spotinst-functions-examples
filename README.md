@@ -45,6 +45,3 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 
 
 
-
-
-
