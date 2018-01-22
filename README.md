@@ -29,19 +29,37 @@ Example:
 serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-getGroups
 ```
 
-<details>
-<summary>Hello World</summary>
-+ [Node](./node-hello-world.md)
-+ [Python](./python-hello-world.md)
-+ [Java8](./java8-hello-world.md)
-</details>
+    .menu-group{
+    	display:inline-block;
+    }
+    .single-menu{
+    	width: 25%
+    }
 
-<details>
-<summary>Languages</summary>
-+ [Node](./node.md)
-+ [Python](./python.md)
-+ [Java8](./java8.md)
-</details>
+<div class="menu-group">
+	<div class="single-menu">
+		<h1>Hello World</h1>
+		<ul>
+			<a href="./node-hello-world.md"><li>Node</li></a>
+			<a href="./python-hello-world.md"><li>Python</li></a>
+			<a href="./java8-hello-world.md"><li>Java8</li></a>
+		</ul>
+	</div>
+   	<div class="single-menu">
+		<h1>Languages</h1>
+		<ul>
+			<a href="./node.md"><li>Node</li></a>
+			<a href="./python.md"><li>Python</li></a>
+			<a href="./java8.md"><li>Java8</li></a>
+		</ul>
+	</div>
+	<div class="single-menu">
+		<h1>Spotinst Connection</h1>
+	</div>
+	<div class="single-menu">
+		<h1>Outside Connection</h1>
+	</div>
+</div>
 
 
 
