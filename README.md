@@ -11,7 +11,7 @@ Here are a few examples to help you get started with Spotinst Serverless Functio
 
 If you are new to using Spotinst Serverless Functions you can view the documentation on the [Serverless Fameworks Documentation](https://serverless.com/framework/docs/providers/spotinst/). You will need to have the serverless framework installed on your local machine as well as set up your Spotinst credentials.
 
-## Examples
+## Cloning a Project
 
 Each of the projects listed here have their own `README.md` that will help you set up each project and their use cases
 
@@ -41,10 +41,15 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
     border-radius: 5px;
 	padding: 10px 10px;
 	margin: 10px 10px;
+	margin-top: 0px;
+}
+li{
+	font-size: 16px;
 }
 </style>
 
     <div class="menu-group">
+    	<h1>Example Functions Menu</h1>
 		<div class="single-menu">
 			<h3>Hello World</h3>
 			<ul>
