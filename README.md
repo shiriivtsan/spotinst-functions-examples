@@ -34,13 +34,19 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 	display:inline-block;
 }
 .single-menu{
-	width: 25%
+	width: 22%;
+	min-height:350px;
+    float:left;
+    border: 2px solid black;
+    border-radius: 5px;
+	padding: 10px 10px;
+	margin: 10px 10px;
 }
 </style>
 
 <div class="menu-group">
 	<div class="single-menu">
-		<h1>Hello World</h1>
+		<h3>Hello World</h3>
 		<ul>
 			<a href="./node-hello-world.md"><li>Node</li></a>
 			<a href="./python-hello-world.md"><li>Python</li></a>
@@ -48,7 +54,7 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 		</ul>
 	</div>
    	<div class="single-menu">
-		<h1>Languages</h1>
+		<h3>Languages</h3>
 		<ul>
 			<a href="./node.md"><li>Node</li></a>
 			<a href="./python.md"><li>Python</li></a>
@@ -56,11 +62,18 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 		</ul>
 	</div>
 	<div class="single-menu">
-		<h1>Spotinst Connection</h1>
-
+		<h3>Spotinst Connection</h3>
+			<a href="./endpoints.md"><li>Endpoints</li></a>
+			<a href="./document-store.md"><li>Document Store</li></a>
+			<a href="./emr.md"><li>EMR</li></a>
+			<a href="./elastigroup.md"><li>Elastigroup</li></a>
 	</div>
 	<div class="single-menu">
-		<h1>Outside Connection</h1>
+		<h3>Outside Connection</h3>
+			<a href="./lyft.md"><li>Lyft</li></a>
+			<a href="./twitter.md"><li>Twitter</li></a>
+			<a href="./pagerduty.md"><li>PagerDuty</li></a>
+			<a href="./datadog.md"><li>DataDog</li></a>
 	</div>
 </div>
 
