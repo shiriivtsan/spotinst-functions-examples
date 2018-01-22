@@ -1,3 +1,7 @@
+---
+title: DataDog
+---
+
 # Data Dog Connection Examples
 
 |Node Functions| 

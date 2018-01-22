@@ -1,3 +1,7 @@
+---
+title: Java8
+---
+
 # Java8 Example Functions
 
 |Java8 Functions| 

@@ -1,3 +1,7 @@
+---
+title: Python
+---
+
 # Python Function Examples
 
 |Python Functions| 

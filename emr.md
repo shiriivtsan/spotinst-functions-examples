@@ -1,3 +1,7 @@
+---
+title: EMR
+---
+
 # EMR Examples
 
 |Node Functions| 

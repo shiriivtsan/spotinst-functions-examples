@@ -1,3 +1,7 @@
+---
+title: Elastigroup
+---
+
 # Elastigroup Examples
 
 |Node Functions| 

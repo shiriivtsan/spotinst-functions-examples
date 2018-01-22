@@ -1,3 +1,7 @@
+---
+title: DocumentStore
+---
+
 # Document Store Examples
 
 |Node Functions| 
