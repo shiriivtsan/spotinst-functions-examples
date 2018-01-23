@@ -54,16 +54,16 @@ li{
 		<h3>Hello World</h3>
 		<ul>
 			<a href="./node-hello-world"><li>Node</li></a>
-			<a href="./python-hello-world.md"><li>Python</li></a>
-			<a href="./java8-hello-world.md"><li>Java8</li></a>
+			<a href="./python-hello-world"><li>Python</li></a>
+			<a href="./java8-hello-world"><li>Java8</li></a>
 		</ul>
 	</div>
    	<div class="single-menu">
 		<h3>Languages</h3>
 		<ul>
-			<a href="./node-hello-world"><li>Node</li></a>
-			<a href="./python-hello-world"><li>Python</li></a>
-			<a href="./java8-hello-world"><li>Java8</li></a>
+			<a href="./node"><li>Node</li></a>
+			<a href="./python"><li>Python</li></a>
+			<a href="./java8"><li>Java8</li></a>
 		</ul>
 	</div>
 	<div class="single-menu">
