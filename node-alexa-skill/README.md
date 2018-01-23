@@ -1,5 +1,7 @@
 # Alexa Skill That Runs on Spotinst and Allows you to Check Your Elastigroups
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-alexa-skill)
+
 This project will allow you to create an Alexa skill that runs on Spotinst. This skill will query your Spotinst account and return information about your Elastigroups
 
 ## Download

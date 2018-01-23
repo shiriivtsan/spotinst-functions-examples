@@ -1,5 +1,7 @@
 # Get Elastigroups Serverless Function using Spotinst SDK
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-spotinst-sdk-getGroups)
+
 This is a simple node project that allows you to connect to the Spotinst API and get current Elastigroups from your account.
 
 ## Download

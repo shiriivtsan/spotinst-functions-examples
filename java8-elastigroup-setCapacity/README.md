@@ -1,5 +1,8 @@
 # Set Elastigroup Capacity
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/java8-elastigroup-setTarget)
+
+
 This function will connect to your Elastigroups and set the target, min and max capacity limits using Java8
 
 ## Download

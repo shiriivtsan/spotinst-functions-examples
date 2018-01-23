@@ -1,5 +1,7 @@
 # Lyft Web App
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-lyft-webApp)
+
 This service uses three functions to create a web application that allows you to order a lyft
 
 ## Download

@@ -1,5 +1,7 @@
 # Node Raffle App
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-raffle-app)
+
 <img align="right" width="300" src="../assets/raffle-app.png" />
 
 
