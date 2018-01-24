@@ -46,7 +46,8 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Java8 Spotinst Elastigroup Scale Down](./java8-elastigroup-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| Java8 |
 |[Java8 Spotinst Elastigroup Scale Up](./java8-elastigroup-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| Java8 |
 |[Java8 Spotinst Elastigroup Set Target](./java8-elastigroup-setCapacity) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| Java8 |
-
+|[Java8 Spotinst API Suspend Scaling Policies](./java8-spotinst-api-suspendPolicy) </br> This example shows you how to connect to the Spotinst API to suspend scaling policies on your elastigroups| nodeJS |
+|[Java8 Spotinst API Resume Scaling Policies](./java8-spotinst-api-resumePolicy) </br> This example shows you how to connect to the Spotinst API to resume scaling policies on your elastigroups| nodeJS |
 
 |Spotinst Function Features Examples | Runtime  |
 |:--------------------------- |:-----|
