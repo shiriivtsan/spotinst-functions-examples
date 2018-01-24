@@ -15,13 +15,13 @@ title: Elastigroup
 |[Suspend Scaling Policies](./node-spotinst-api-suspendPolicy)  This example shows you how to connect to the Spotinst API to suspend scaling policies on your elastigroups|
 |[Resume Scaling Policies](./node-spotinst-api-resumePolicy)  This example shows you how to connect to the Spotinst API to resume scaling policies on your elastigroups|
 
-<br><br>
+<br>
 
 |Python Functions| 
 |:--------------------------- |
 |[Get All Elastigroups](./python-spotinst-sdk-getGroups)  This example shows you how to connect to the Spotinst SDK and return all the Elastigroups that were created in the past hour|
 
-<br><br>
+<br>
 
 |Java8 Functions| 
 |:--------------------------- |
