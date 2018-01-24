@@ -1,5 +1,7 @@
 # Insert New Value Into Document Store
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-docstore-newValue)
+
 This function will allow you to insert a new key value pair into your document store in a specific environment
 
 ## Download

@@ -1,5 +1,7 @@
 # Add Endpoint Alias
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-endpoint-addAlias)
+
 This function will allow you to connect your environment to a hosted Alias.
 
 ## Download

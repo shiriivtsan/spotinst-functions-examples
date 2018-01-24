@@ -1,5 +1,7 @@
 # Connect Elastigroup to Data Dog Metrics
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-datadog-connect)
+
 This project we will connect your Elastigroups to Data Dog to send a report every minute to Data Dog on the number of instances you have as a metric.
 
 ## Download

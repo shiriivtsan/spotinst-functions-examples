@@ -1,5 +1,7 @@
 # Simple Node Chatbot
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-simple-chatbot)
+
 <img align="right" width="300" src="../assets/chat-bot.png" />
 
 This porject will simulate a basic chatbot. The user will be able to enter messages and the bot will check if there is a response to the exact input from the user. If the user does not enter the exact input then the bot will respond with "I dont have an answer for that". If you want to input your own message go to the `memory.js` file and alter it for your needs. 

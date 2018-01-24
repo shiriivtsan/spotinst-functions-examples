@@ -1,5 +1,7 @@
 # Connect Elastigroups with AWS Batch Queue
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/python-aws-batch)
+
 This function will connect to your AWS batch queue and check the memory and vcpus that are required for the jobs waiting in the "RUNNABLE" queue. Then it will scale your Elastigroup based on the users choice of either memory or vcpus. It will only change the target value and not the minimum or maximum so the group cannot scale outside of your set boundaries.
 
 ## Download

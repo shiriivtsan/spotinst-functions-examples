@@ -1,5 +1,7 @@
 # Get All Endpoint Patterns
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-endpoint-getPattern)
+
 This function will return all the endpoint patterns in a specific environment.
 
 ## Download

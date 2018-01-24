@@ -1,5 +1,7 @@
 # Get All Values From Document Store
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-docstore-getAll)
+
 This function will allow you to access your document store in a specific region and return all the key value pairs in the logs.
 
 ## Download

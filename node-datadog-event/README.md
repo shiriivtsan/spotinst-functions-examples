@@ -1,5 +1,7 @@
 # Connect Elastigroup to Data Dog Events
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-datadog-event)
+
 This project we will connect your Elastigroups to Data Dog to send an event notification when you add, delete or have an unhealthy instance.
 
 ## Download

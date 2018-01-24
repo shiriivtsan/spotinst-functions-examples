@@ -1,5 +1,7 @@
 # Scale Up Elastigroups
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-elastigroup-scaleUp)
+
 This function will connect to your Elastigroups and can scale up by a specific value. 
 
 ## Download

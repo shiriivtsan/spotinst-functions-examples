@@ -1,5 +1,7 @@
 # Resume Scaling Policy Using Spotinst API 
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-resumePolicy)
+
 This is a simple node project that allows you to connect to the Spotinst API and resume scaling policies on your Elastigroup.
 
 ## Download
