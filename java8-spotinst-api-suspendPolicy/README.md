@@ -1,7 +1,5 @@
 # Java8 Suspend Scaling Policy
 
-[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/java8-spotinst-api-suspendPolicy)
-
 This is a simple Java8 project that allows you to connect to the Spotinst API and suspend scaling policies on your Elastigroup.
 
 ## Download

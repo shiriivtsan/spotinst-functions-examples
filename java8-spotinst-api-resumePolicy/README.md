@@ -1,7 +1,5 @@
 # Java8 Resume Scaling Policy
 
-[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/java8-spotinst-api-resumePolicy)
-
 This is a simple Java8 project that allows you to connect to the Spotinst API and resume scaling policies on your Elastigroup.
 
 ## Download
@@ -79,7 +77,7 @@ After the project has been deployed you will need to enter you Spotinst Account 
 To test if this is working use the command:
 
 ```bash
-sls invoke -f ElastigroupSetTarget
+sls invoke -f ResumePolicy
 ```
 
 Or you can use the test feature on the Spoinst console. Either way you should see "Succes" if it executed properly or "400 Error: Check Logs"
