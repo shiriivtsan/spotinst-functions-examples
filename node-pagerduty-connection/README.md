@@ -6,7 +6,7 @@ This project allows you to connect your Elastigroups to PagerDuty to send notifi
 
 ## Download
 
-To download this project as a template for your own Spotinst Function please use this command
+To download this project as a template for your own Spotinst Function please use this command.
 
 ```bash
 serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-pagerduty-connection
