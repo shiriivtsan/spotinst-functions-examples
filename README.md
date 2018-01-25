@@ -46,7 +46,8 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Java8 Spotinst Elastigroup Scale Down](./java8-elastigroup-scaleDown) </br> This example will allow you to connect to your EMR Elastigroup and scale it down| Java8 |
 |[Java8 Spotinst Elastigroup Scale Up](./java8-elastigroup-scaleUp) </br> This example will allow you to connect to your EMR Elastigroup and scale it up| Java8 |
 |[Java8 Spotinst Elastigroup Set Target](./java8-elastigroup-setCapacity) </br> This example will allow you to connect to your EMR Elastigroup and set the target, min and max capacity limits| Java8 |
-
+|[Java8 Spotinst API Suspend Scaling Policies](./node-spotinst-api-suspendPolicy) </br> This example shows you how to connect to the Spotinst API to suspend scaling policies on your elastigroups| nodeJS |
+|[Java8 Spotinst API Resume Scaling Policies](./node-spotinst-api-resumePolicy) </br> This example shows you how to connect to the Spotinst API to resume scaling policies on your elastigroups| nodeJS |
 
 |Spotinst Function Features Examples | Runtime  |
 |:--------------------------- |:-----|
@@ -59,7 +60,6 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Spotinst Update Endpoint Pattern](./node-endpoint-updatePattern) </br> This example will allow you to update an existing endpoint pattern             | nodeJS |
 |[Node Get All Values From Document Store ](./node-docstore-getAll) </br> This function will allow you to get all the key value pairs from your document store in a specific region| nodeJS |
 |[Node Insert New Value Into Document Store](./node-docstore-newValue) </br> This function will allow you to insert a new value into your document store in a specific region| nodeJS |
-|[Node Static Binary (with ffmpeg)](./node-static-binary) </br> This is an example of how to use astatic binary included in your function package.           | nodeJs |
 
 |External Connection Examples | Runtime  |
 |:--------------------------- |:-----|
@@ -75,3 +75,6 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Elastigroup-Data Dog Events](./node-datadog-event) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Events to track your group| nodeJS |
 |[Lyft Web App](./node-lyft-webApp) </br> This services is three functions working together to allow you to request a lyft| nodeJS |
 |[Twitter Vision App](./node-twitter-vision) </br> This services is three functions working together to allow you to capture tweets that have an image and contain any word you want | nodeJS |
+|[Node Static Binary (with ffmpeg)](./node-static-binary) </br> This is an example of how to use astatic binary included in your function package.           | nodeJs |
+|[Node SNS Endpoint](./node-sns-endpoint) </br> This example allows you to create a SNS endpoint allowing you to have total control of the response| nodeJS |
+
