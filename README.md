@@ -59,7 +59,7 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Spotinst Update Endpoint Pattern](./node-endpoint-updatePattern) </br> This example will allow you to update an existing endpoint pattern             | nodeJS |
 |[Node Get All Values From Document Store ](./node-docstore-getAll) </br> This function will allow you to get all the key value pairs from your document store in a specific region| nodeJS |
 |[Node Insert New Value Into Document Store](./node-docstore-newValue) </br> This function will allow you to insert a new value into your document store in a specific region| nodeJS |
-
+|[Node Static Binary (with ffmpeg)](./node-static-binary) </br> This is an example of how to use astatic binary included in your function package.           | nodeJs |
 
 |External Connection Examples | Runtime  |
 |:--------------------------- |:-----|
