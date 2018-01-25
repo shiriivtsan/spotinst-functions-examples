@@ -1,7 +1,0 @@
-{
-  "template": {
-    "name": "Elastigroup Set Target",
-    "description": "This function allows you to set the capacity limits for your Elastigroup",
-    "active": true
-  }
-}

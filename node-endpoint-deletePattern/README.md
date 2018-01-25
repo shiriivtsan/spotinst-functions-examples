@@ -1,5 +1,7 @@
 # Delete Endpoint Pattern
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-endpoint-deletePattern)
+
 This function will delete a specific endpoint pattern.
 
 ## Download

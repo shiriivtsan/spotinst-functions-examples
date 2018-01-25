@@ -1,5 +1,7 @@
 # Set EMR Elastigroup Targets
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-emr-setTarget)
+
 This function will connect to your EMR Elastigroups and set the max min and target.
 
 ## Download
