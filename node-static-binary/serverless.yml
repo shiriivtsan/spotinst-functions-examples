@@ -1,17 +1,17 @@
-service: node-static-binary
+service: NodeStaticBinary
 
 provider:
   name: spotinst
   spotinst:
-    environment: <env-XXXX> # NOTE: Remember to add the environment ID
+    environment: {Your Environment ID} # NOTE: Remember to add the environment ID
 
 functions:
-  hello:
+  NodeStaticBinary:
     runtime: nodejs8.3
     handler: handler.main
-    memory: 128
-    timeout: 30
-    access: private
+    memory: 1024
+    timeout: 90
+    access: public
 
 plugins:
   - serverless-spotinst-functions
