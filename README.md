@@ -60,6 +60,7 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Spotinst Update Endpoint Pattern](./node-endpoint-updatePattern) </br> This example will allow you to update an existing endpoint pattern             | nodeJS |
 |[Node Get All Values From Document Store ](./node-docstore-getAll) </br> This function will allow you to get all the key value pairs from your document store in a specific region| nodeJS |
 |[Node Insert New Value Into Document Store](./node-docstore-newValue) </br> This function will allow you to insert a new value into your document store in a specific region| nodeJS |
+|[Node Microservice](./node-docstore-newValue) </br> This application will allow you to create a API microservice backend with custom endpoints| nodeJS |
 
 |External Connection Examples | Runtime  |
 |:--------------------------- |:-----|
@@ -77,4 +78,5 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Twitter Vision App](./node-twitter-vision) </br> This services is three functions working together to allow you to capture tweets that have an image and contain any word you want | nodeJS |
 |[Node Static Binary (with ffmpeg)](./node-static-binary) </br> This is an example of how to use astatic binary included in your function package.           | nodeJs |
 |[Node SNS Endpoint](./node-sns-endpoint) </br> This example allows you to create a SNS endpoint allowing you to have total control of the response| nodeJS |
+|[Node Simple Map Reduce](./node-map-reduce) </br> This example allows you to run map reduce on a random JSON or key value pairs| nodeJS |
 
