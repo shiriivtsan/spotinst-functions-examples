@@ -20,12 +20,11 @@ functions:
     memory: 128
     timeout: 30
     access: public
-    environmentVariables: {
-      spotAccount: "Spotinst Account ID",
-      spotToken: "Spotinst API Token",
-      spotEnvironment: "Spoinst Environment ID",
-      googleAPI: "Google Maps API key"
-    }
+    environmentVariables:
+      spotAccount: Spotinst Account ID
+      spotToken: Spotinst API Token
+      spotEnvironment: Spoinst Environment ID
+      googleAPI: Google Maps API key
 
   LyftAPI:
     runtime: nodejs8.3
@@ -33,13 +32,12 @@ functions:
     memory: 128
     timeout: 30
     access: public
-    environmentVariables: {
-      spotAccount: "Spotinst Account ID",
-      spotToken: "Spotinst API Token",
-      spotEnvironment: "Spoinst Environment ID",
-      lyftId: "Lyft Client ID",
-      lyftSecret: "Lyft Client Secret"
-    }
+    environmentVariables:
+      spotAccount: Spotinst Account ID
+      spotToken: Spotinst API Token
+      spotEnvironment: Spoinst Environment ID
+      lyftId: Lyft Client ID
+      lyftSecret: Lyft Client Secret
 
 plugins:
   - serverless-spotinst-functions

@@ -12,10 +12,9 @@ functions:
     memory: 128
     timeout: 30
     access: public
-    environmentVariables: {
-      pagerToken: "Spotinst Account ID",
-      pagerKey: "Spotinst API Token"
-    }
+    environmentVariables:
+      pagerToken: Spotinst Account ID
+      pagerKey: Spotinst API Token
 
 plugins:
   - serverless-spotinst-functions

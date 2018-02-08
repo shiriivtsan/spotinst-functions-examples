@@ -15,11 +15,10 @@ functions:
     cron:  
      active: true
      value: '/1 * * * *'
-    environmentVariables: {
-      datadogAPI: "Your Data Dog API Token",
-      spotToken: "Your Spotinst Token",
-      spotAccount: "Your Spotinst Account ID"
-    }
+    environmentVariables:
+      datadogAPI: Your Data Dog API Token
+      spotToken: Your Spotinst Token
+      spotAccount: Your Spotinst Account ID
 
 plugins:
   - serverless-spotinst-functions

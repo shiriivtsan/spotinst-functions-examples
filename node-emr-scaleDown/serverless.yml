@@ -12,12 +12,11 @@ functions:
     memory: 128
     timeout: 30
     access: private
-    environmentVariables: {
-      spotAccount: "Spotinst Account ID",
-      spotToken: "Spotinst API Token",
-      spotEMR: "EMR Elastigroup ID",
-      adjustment: "Ammount to Scale"
-    }
+    environmentVariables:
+      spotAccount: Spotinst Account ID
+      spotToken: Spotinst API Token
+      spotEMR: EMR Elastigroup ID
+      adjustment: Ammount to Scale
 
 plugins:
   - serverless-spotinst-functions

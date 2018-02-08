@@ -11,12 +11,11 @@ functions:
     handler: handler.main
     memory: 128
     timeout: 30
-    environmentVariables: {
-      spotToken: "Spotinst API Token",
-      spotAccount: "Spotinst Account ID",
-      spotGroup: "Elastigroup ID",
-      spotPolicy: "Scaling Policy Name"
-    }
+    environmentVariables:
+      spotToken: Spotinst API Token
+      spotAccount: Spotinst Account ID
+      spotGroup: Elastigroup ID
+      spotPolicy: Scaling Policy Name
 
 plugins:
   - serverless-spotinst-functions
