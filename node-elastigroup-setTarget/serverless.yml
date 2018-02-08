@@ -12,14 +12,13 @@ functions:
     memory: 128
     timeout: 30
     access: private
-    environmentVariables: {
-      spotAccount: "Spotinst Account ID",
-      spotToken: "Spotinst API Token",
-      spotGroup: "Elastigroup ID",
-      max: "Max number of capacity units",
-      min: "Min number of capacity units",
-      target: "Target number of capacity units"
-    }
+    environmentVariables:
+      spotAccount: Spotinst Account ID
+      spotToken: Spotinst API Token
+      spotGroup: Elastigroup ID
+      max: Max number of capacity units
+      min: Min number of capacity units
+      target: Target number of capacity units
 
 plugins:
   - serverless-spotinst-functions

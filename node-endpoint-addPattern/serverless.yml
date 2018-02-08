@@ -12,14 +12,13 @@ functions:
     memory: 128
     timeout: 30
     access: private
-    environmentVariables: {
-      spotAccount: "Spotinst Account ID",
-      spotToken: "Spotinst API Token",
-      spotEnvironment: "Spotinst Environment ID",
-      method: "HTTP Request Method",
-      pattern: "Pattern After the Alias URL",
-      spotFunction: "Spotinst Function ID Maps to Pattern"
-    }
+    environmentVariables:
+      spotAccount: Spotinst Account ID
+      spotToken: Spotinst API Token
+      spotEnvironment: Spotinst Environment ID
+      method: HTTP Request Method
+      pattern: Pattern After the Alias URL
+      spotFunction: Spotinst Function ID Maps to Pattern
 
 plugins:
   - serverless-spotinst-functions

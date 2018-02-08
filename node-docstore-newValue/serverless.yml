@@ -12,13 +12,12 @@ functions:
     memory: 128
     timeout: 30
     access: private
-    environmentVariables: {
-      spotAccount: "Spotinst Account ID",
-      spotToken: "Spotinst API Token",
-      spotEnvironment: "Spotinst Environment ID",
-      key: "Key to Enter in Document Store",
-      value: "Value to Enter in Document Store"
-    }
+    environmentVariables:
+      spotAccount: Spotinst Account ID
+      spotToken: Spotinst API Token
+      spotEnvironment: Spotinst Environment ID
+      key: Key to Enter in Document Store
+      value: "Value to Enter in Document Store
 
 plugins:
   - serverless-spotinst-functions

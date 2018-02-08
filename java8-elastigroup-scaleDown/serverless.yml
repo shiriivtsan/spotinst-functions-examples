@@ -12,11 +12,11 @@ functions:
     memory: 128
     timeout: 30
     access: private
-    environmentVariables: {
-      spotAccount: "Spotinst Account ID",
-      spotToken: "Spotinst API Token",
-      spotGroup: "Spotinst Elastigroup ID"
-    }
+    environmentVariables:
+      spotAccount: Spotinst Account ID
+      spotToken: Spotinst API Token
+      spotGroup: Spotinst Elastigroup ID
+
 
 plugins:
   - serverless-spotinst-functions

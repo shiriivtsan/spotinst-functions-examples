@@ -12,11 +12,10 @@ functions:
     memory: 128
     timeout: 30
     access: private
-    environmentVariables: {
-      spotAccount: "Spotinst Account ID",
-      spotToken: "Spotinst API Token",
-      spotPattern: "Spotinst Pattern ID to Delete"
-    }
+    environmentVariables:
+      spotAccount: Spotinst Account ID
+      spotToken: Spotinst API Token
+      spotPattern: Spotinst Pattern ID to Delete
     
 plugins:
   - serverless-spotinst-functions

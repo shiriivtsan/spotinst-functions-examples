@@ -12,9 +12,9 @@ functions:
     memory: 128
     timeout: 30
     access: public
-    environmentVariables: {
-      datadogAPI: "Your Data Dog API Token"
-    }
+    environmentVariables:
+      datadogAPI: Your Data Dog API Token
+
 
 plugins:
   - serverless-spotinst-functions
