@@ -24,7 +24,7 @@
         "node-elastigroup-scaleUp",
         "node-elastigroup-setTarget",
         "node-spotinst-api-resumePolicy",
-        "node-spotinst-api-suspendPolicy",
+        "node-spotinst-api-suspendPolicy"
       ]
     },
     {
