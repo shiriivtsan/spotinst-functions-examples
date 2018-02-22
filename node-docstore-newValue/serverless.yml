@@ -17,7 +17,7 @@ functions:
       spotToken: Spotinst API Token
       spotEnvironment: Spotinst Environment ID
       key: Key to Enter in Document Store
-      value: "Value to Enter in Document Store
+      value: "Value to Enter in Document Store"
 
 plugins:
   - serverless-spotinst-functions
