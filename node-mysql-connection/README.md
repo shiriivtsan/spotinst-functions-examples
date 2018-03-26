@@ -2,7 +2,7 @@
 
 [Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-mysql-connection)
 
-This porject will allow you to create a connection to a MySQL database and either return all the values or given the right parameters will insert a new value into your table.
+This project will allow you to create a connection to a MySQL database and either return all the values or given the right parameters will insert a new value into your table.
 
 ## Download
 
