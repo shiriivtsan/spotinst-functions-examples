@@ -33,6 +33,7 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 
 |Spotinst Elastigroup & EMR Examples | Runtime  |
 |:--------------------------- |:-----|
+|[Node Spotinst Stateful Instance Pause and Resume All](./node-stateful-instance-service) </br> This example will allow you to pause and resume all your stateful insances in your account| nodeJS |
 |[Node Spotinst API Get All Elastigroups](./node-spotinst-api-getGroups) </br> This example shows you how to connect to the Spotinst API and return all the Elastigroups that were created in the past hour| nodeJS |
 |[Node Spotinst Scale Down Elastigroups](./node-elastigroup-scaleDown) </br> This function will allow you to connect to your Elastigroup and scale it down. This is super useful if you hook them up to a timer to auto-scale for you| nodeJS |
 |[Node Spotinst Scale Up Elastigroups](./node-elastigroup-scaleUp) </br> This function will allow you to connect to your Elastigroup and scale it up. This is super useful if you hook them up to a timer to auto-scale for you| nodeJS |
