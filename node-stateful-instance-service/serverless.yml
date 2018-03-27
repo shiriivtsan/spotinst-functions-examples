@@ -1,0 +1,59 @@
+service: StatefulService
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment ID}
+
+functions:
+  GetAllStateful:
+    runtime: nodejs8.3
+    handler: get-all.main
+    memory: 128
+    timeout: 30
+    access: public
+    environmentVariables:
+      accountId: "Spotinst Account ID"
+      token: "Spotinst API Token"
+    endpoint:
+      method: "ALL"
+      path: "/get-all-stateful"
+
+  ChangeRunningAll:
+    runtime: nodejs8.3
+    handler: change.main
+    memory: 128
+    timeout: 30
+    access: public
+    endpoint:
+      method: "ALL"
+      path: "/change-all"
+
+  PauseStateful:
+    runtime: nodejs8.3
+    handler: pause.main
+    memory: 128
+    timeout: 30
+    access: public
+    environmentVariables:
+      accountId: "Spotinst Account ID"
+      token: "Spotinst API Token"
+    endpoint:
+      method: "ALL"
+      path: "/pause-stateful"
+
+  ResumeStateful:
+    runtime: nodejs8.3
+    handler: resume.main
+    memory: 128
+    timeout: 30
+    access: public
+    environmentVariables:
+      accountId: "Spotinst Account ID"
+      token: "Spotinst API Token"
+    endpoint:
+      method: "ALL"
+      path: "/resume-stateful"
+
+plugins:
+  - serverless-spotinst-functions
