@@ -1,7 +1,5 @@
 # Pause and Resume all Stateful Instances in Your Account
 
-[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-pagerduty-connection)
-
 This project allows you to pause or resume all the stateful instances in your account, or you can specify the group ID and SSI ID for the instances that you want to pause or resume
 
 ## Download
@@ -52,7 +50,7 @@ After the project has been deployed you will need to enter you Spotinst Account 
 
 ## Testing
 
-To test this service you can make a `POST` request to the `ChangeRunningAll` function endppoint where the body is a json like this
+To test this service you can make a `POST` request to the `ChangeRunningAll` function endpoint where the body is a json like this
 `{state:"resume"} ` or `{state:"pause"}`. Or if you only want to pause/resume specific instances in your account you can make a `POST` request to either `PauseStateful` or `ResumeStateful` with the body like this 
 ```json
 {
@@ -62,7 +60,6 @@ To test this service you can make a `POST` request to the `ChangeRunningAll` fun
 
 ```
 
-**Note:** The options you select here will have to match the options that you input for the checkEventType() function in the handler.js
 
 
 
