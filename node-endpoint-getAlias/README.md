@@ -1,5 +1,7 @@
 # Get All Endpoint Alias
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-endpoint-getAlias)
+
 This function will return all the endpoint alias in a specific environment.
 
 ## Download

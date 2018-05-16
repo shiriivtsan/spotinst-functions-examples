@@ -1,0 +1,16 @@
+{
+  "name": "spotionst-nodejs",
+  "version": "1.0.0",
+  "description": "Spotinst Functions NodeJS sample for serverless framework service.",
+  "main": "handler.js",
+  "keywords": [
+    "serverless",
+    "spotinst"
+  ],
+  "devDependencies": {
+    "serverless-spotinst-functions": "*"
+  },
+  "dependencies": {
+    "mysql": "^2.15.0"
+  }
+}

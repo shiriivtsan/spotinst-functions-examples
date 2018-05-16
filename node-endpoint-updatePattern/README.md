@@ -1,5 +1,7 @@
 # Update Endpoint Pattern
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-endpoint-updatePattern)
+
 This function allow you to connect your functions to a specfic pattern under an alias
 
 ## Download

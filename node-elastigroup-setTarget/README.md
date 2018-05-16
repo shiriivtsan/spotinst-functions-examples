@@ -1,5 +1,8 @@
 # Set Elastigroup Targets
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-elastigroup-setTarget)
+
+
 This function will connect to your Elastigroups and set the target, min and max capacity limits
 
 ## Download

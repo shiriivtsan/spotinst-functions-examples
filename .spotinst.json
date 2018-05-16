@@ -3,14 +3,12 @@
     {
       "name": "General",
       "templates": [
-        "node-mysql-connection",
-        "python-mysql-connection"
+        "node-mysql-connection"
       ]
     },
     {
       "name": "3rd Party Integration",
       "templates": [
-        "python-aws-batch",
         "node-alexa-skill",
         "node-datadog-event",
         "node-datadog-metric",
@@ -26,8 +24,7 @@
         "node-elastigroup-scaleUp",
         "node-elastigroup-setTarget",
         "node-spotinst-api-resumePolicy",
-        "node-spotinst-api-suspendPolicy",
-        "python-spotinst-sdk-getGroups"
+        "node-spotinst-api-suspendPolicy"
       ]
     },
     {

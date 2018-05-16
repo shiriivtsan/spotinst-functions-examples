@@ -1,5 +1,7 @@
 # Suspend Scaling Policy Using Spotinst API 
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-spotinst-api-suspendPolicy)
+
 This is a simple node project that allows you to connect to the Spotinst API and suspend scaling policies on your Elastigroup.
 
 ## Download

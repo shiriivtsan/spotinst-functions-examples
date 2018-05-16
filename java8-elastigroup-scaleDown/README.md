@@ -1,5 +1,7 @@
 # Scale Down Elastigroups
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/java8-elastigroup-scaleDown)
+
 This function will connect to your Elastigroups and can scale down by a specific value using Java8. 
 
 ## Download

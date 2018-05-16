@@ -1,0 +1,31 @@
+service: Microservice
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: env-0061b0a1
+
+functions:
+  Get:
+    runtime: nodejs8.3
+    handler: get.main
+    memory: 128
+    timeout: 30
+    access: public 
+
+  Post:
+    runtime: nodejs8.3
+    handler: post.main
+    memory: 128
+    timeout: 30
+    access: public 
+
+  Delete:
+    runtime: nodejs8.3
+    handler: delete.main
+    memory: 128
+    timeout: 30
+    access: public 
+
+plugins:
+  - serverless-spotinst-functions

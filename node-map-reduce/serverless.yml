@@ -1,0 +1,41 @@
+service: MapReduce
+
+provider:
+  name: spotinst
+  spotinst:
+    environment: {Your Environment Variable}
+
+functions:
+  Generator:
+    runtime: nodejs8.3
+    handler: Generator.main
+    memory: 512
+    timeout: 150
+    access: public
+    environmentVariables: {
+      size: 100
+    }
+
+  Splitter:
+    runtime: nodejs8.3
+    handler: Splitter.main
+    memory: 512
+    timeout: 150
+    access: public
+
+  Mapper:
+    runtime: nodejs8.3
+    handler: Mapper.main
+    memory: 512
+    timeout: 150
+    access: public
+
+  Reducer:
+    runtime: nodejs8.3
+    handler: Reducer.main
+    memory: 512
+    timeout: 150
+    access: public
+
+plugins:
+  - serverless-spotinst-functions

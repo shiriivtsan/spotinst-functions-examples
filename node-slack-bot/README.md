@@ -1,5 +1,7 @@
 # Basic Slack Bot That Connects to Your GitHub
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-slack-bot)
+
 This project is a basic slack bot that will connect to a group on GitHub and check all the repositories to see when they were updated. Then it will send a message to your Slack channel alerting you of the repos that have been updated in the past week or not. 
 
 ## Download

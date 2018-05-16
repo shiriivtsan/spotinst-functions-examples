@@ -15,7 +15,7 @@ functions:
     environmentVariables:
       spotAccount: Spotinst Account ID
       spotToken: Spotinst API Token
-      spotEnvironment: "Spotinst Environment ID
+      spotEnvironment: "Spotinst Environment ID"
 
 plugins:
   - serverless-spotinst-functions

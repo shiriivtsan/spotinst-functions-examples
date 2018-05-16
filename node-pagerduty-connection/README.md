@@ -1,10 +1,12 @@
 # Connect Spotinst Elastigroups to Notify PagerDuty
 
-This project allows you to connect your Elastigroups to PagerDuty to send notification for any event of our Event Types. The idea is that the Elastigroup will send a request to this function which will in turn send an event notification to PagerDuty.
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-pagerduty-connection)
+
+This project allows you to connect your Elastigroups to PagerDuty to send notification for any event of our Event Types. The idea is that the Elastigroup will send a request to this function which will in tern send a event notification to PagerDuty.
 
 ## Download
 
-To download this project as a template for your own Spotinst Function please use this command
+To download this project as a template for your own Spotinst Function please use this command.
 
 ```bash
 serverless create --template-url https://github.com/spotinst/spotinst-functions-examples/tree/master/node-pagerduty-connection

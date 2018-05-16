@@ -1,13 +1,12 @@
 {
-  "name": "ElastigroupSetTarget",
+  "name": "spotionst-nodejs",
   "version": "1.0.0",
-  "description": "This function allows you to set the capacity limits for your Elastigroup",
-  "main": "index.js",
+  "description": "Spotinst Functions NodeJS sample for serverless framework service.",
+  "main": "handler.js",
   "keywords": [
     "serverless",
     "spotinst"
   ],
-  "template":true,
   "devDependencies": {
     "serverless-spotinst-functions": "*"
   },

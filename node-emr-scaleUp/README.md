@@ -1,5 +1,8 @@
 # Scale Up EMR Elastigroups
 
+[Check Out the Code](https://github.com/spotinst/spotinst-functions-examples/tree/master/node-emr-scaleUp)
+
+
 This function will connect to your EMR Elastigroups and can scale it up. 
 
 ## Download
