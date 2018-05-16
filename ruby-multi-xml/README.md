@@ -1,4 +1,4 @@
-# Node SNS Endpoint Function
+# Ruby XML Parser using MultiXML
 
 This simple Ruby project illustrates how to use gems on Spotinst Functions. It uses [MultiXML]([https://github.com/sferik/multi_xml) to do the XML work.
 
