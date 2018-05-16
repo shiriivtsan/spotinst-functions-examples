@@ -46,7 +46,7 @@ npm install
 
 Once this has been completed navigate to the handler.js file and input your token and account ID. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
 
-Next, install the gem locally with the following command:
+Next, install the gem locally to your project root with the following command:
 ```ruby
 bundle install --path=./
 ```
