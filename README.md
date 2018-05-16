@@ -76,8 +76,10 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Elastigroup-Data Dog Metrics](./node-datadog-metric) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Metrics to track your group| nodeJS |
 |[Node Elastigroup-Data Dog Events](./node-datadog-event) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Events to track your group| nodeJS |
 |[Lyft Web App](./node-lyft-webApp) </br> This services is three functions working together to allow you to request a lyft| nodeJS |
+|[Ruby XML-parser](./ruby-multi-xml) </br> Get started with gems on Functions with this XML-parser example | Ruby |
 |[Twitter Vision App](./node-twitter-vision) </br> This services is three functions working together to allow you to capture tweets that have an image and contain any word you want | nodeJS |
 |[Node Static Binary (with ffmpeg)](./node-static-binary) </br> This is an example of how to use astatic binary included in your function package.           | nodeJs |
 |[Node SNS Endpoint](./node-sns-endpoint) </br> This example allows you to create a SNS endpoint allowing you to have total control of the response| nodeJS |
 |[Node Simple Map Reduce](./node-map-reduce) </br> This example allows you to run map reduce on a random JSON or key value pairs| nodeJS |
+
 

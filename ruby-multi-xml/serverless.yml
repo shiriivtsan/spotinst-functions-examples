@@ -1,0 +1,33 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: xml
+
+provider:
+  name: spotinst
+  #stage: <Stage Name>  #Optional setting. By default it is set to 'dev'
+  spotinst:
+    environment: # add your environment ID
+
+functions:
+  multi_xml:
+    runtime: ruby2.4.1
+    handler: handler.main
+    memory: 128
+    timeout: 30
+    access: public
+
+# extend the framework using plugins listed here:
+# https://github.com/serverless/plugins
+plugins:
+  - serverless-spotinst-functions
