@@ -74,5 +74,5 @@ serverless create --template-url https://github.com/spotinst/spotinst-functions-
 |[Node Elastigroup-Data Dog Metrics](./node-datadog-metric) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Metrics to track your group| nodeJS |
 |[Node Elastigroup-Data Dog Events](./node-datadog-event) </br> This app has two funcitons to connect your Elastigroup to Data Dog and posts Events to track your group| nodeJS |
 |[Lyft Web App](./node-lyft-webApp) </br> This services is three functions working together to allow you to request a lyft| nodeJS |
-|[Ruby XML-parser](./ruby-xml-parser) </br> Get started with gems on Functions with this example | Ruby |
+|[Ruby XML-parser](./ruby-multi-xml) </br> Get started with gems on Functions with this XML-parser example | Ruby |
 
