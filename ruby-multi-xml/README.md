@@ -38,13 +38,13 @@ gem 'multi_xml'
 
 ### Installing
 
-First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin as well as the request and the request-promise libraries by running this command inside the project repository:
+First you will need to fork this repository and set it up on your local machine. Then you will need to install the serverless-spotinst-functions plugin by running this command inside the project repository:
 
 ```bash
 npm install
 ```
 
-Once this has been completed navigate to the handler.js file and input your token and account ID. Then you will need to navigate to the serverless.yml file and under environment add in the environment ID in the environment section.
+Navigate to the serverless.yml file add in the environment ID.
 
 Next, install the gem locally to your project root with the following command:
 ```ruby
@@ -61,14 +61,16 @@ Next, deploy this function using this command:
 sls deploy
 ```
 
-The first time you run this command your new function will be created and linked to your Spotinst account under the environment that you specified. You can check this on the Spotinst Functions console. 
+The first time you run this command, your new function will be created and linked to your Spotinst account under the environment that you specified. You can check this on the Spotinst Functions console. 
 
 ## Testing
 
-Run this function by triggering the endpoint. On the Spotinst Console, navigate to your envionment and function, then select "run test" under the Test tab. You will see the user's name returned as a string in the console window and logs if the project has been hooked up correctly!
+Run this function by triggering the endpoint. On the Spotinst Console, navigate to your envionment and function, then select "Run test" under the Test tab. You will see the user's name returned as a string in the console window and logs if the project has been hooked up correctly!
 
 ### Next Steps:
-You could configure this function to parse XML send in the body of an http request with some minor changes. You could then make a request from an external program - written in any language - and get back your parsed string. This enables you to use your favorite gems anywhere and at any time!
+You could configure this function to parse XML sent in the body of an http request with some minor changes. You could then make a request from an external program - written in any language - and pass back your parsed string. 
+
+You can use this template to add in any gem you want. This enables you to use your favorite gems anywhere and at any time!
 
 
 
