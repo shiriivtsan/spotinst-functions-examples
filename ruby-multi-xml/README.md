@@ -70,7 +70,7 @@ Run this function by triggering the endpoint. On the Spotinst Console, navigate 
 ### Next Steps:
 You could configure this function to parse XML sent in the body of an http request with some minor changes. You could then make a request from an external program - written in any language - and pass back your parsed string. 
 
-You can use this template to add in any gem you want. This enables you to use your favorite gems anywhere and at any time!
+You can use this template to add in any gem you want by updating the Gemfile and rerunning the bundle command. This enables you to use your favorite gems anywhere and at any time!
 
 
 
