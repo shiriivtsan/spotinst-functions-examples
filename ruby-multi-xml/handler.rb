@@ -4,7 +4,7 @@
  # The function should return an Hash
 
 require 'rubygems'
-require_relative './bundler/setup'
+require_relative './bundler/setup' 
 require 'multi_xml'
 
 def main(event, context)
