@@ -29,11 +29,17 @@ The last thing you will need is your account ID, found in the Spotinst console u
 
 #### Ruby
 
-We will use bundler for our ruby configuration. Be sure to include a setup.rb within a bundler directory in your project root. Your Gemfile should contain:
+We will use bundler for our ruby configuration. Your Gemfile should contain:
 
 ```ruby
 source 'https://rubygems.org'
 gem 'multi_xml'
+```
+
+Dont forget to tell Ruby to look for the bundler/setup in your handler.rb:
+
+```ruby
+require_relative './bundler/setup' 
 ```
 
 ### Installing
@@ -48,10 +54,8 @@ Navigate to the serverless.yml file add in the environment ID.
 
 Next, install the gem locally to your project root with the following command:
 ```ruby
-bundle install --path=./
+bundle --standalone --path ./
 ```
-
-Double check that the path to your gem matches the path listed in bundler/config.rb. For this example, you'll notice I've hard-coded 2.3.0 as our example gem is not supported in 2.4.1.
 
 ## Deployment
 
